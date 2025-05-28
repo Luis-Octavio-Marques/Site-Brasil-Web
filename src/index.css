@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: "Lovelo";
+  src: url("../src/assets/fonts/Lovelo-Black.ttf") format("truetype");
+}
+
+h2 {
+  font-family: "Lovelo", sans-serif;
+}
