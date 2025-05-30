@@ -170,16 +170,6 @@ const Carousel = () => {
         >
           &gt;
         </button>
-        <button
-          id="back"
-          onClick={hideDetail}
-          style={{
-            opacity: detail ? 1 : 0,
-            pointerEvents: detail ? "auto" : "none",
-          }}
-        >
-          {t("carousel.seeAll")} &#8599;
-        </button>
       </div>
     </div>
   );

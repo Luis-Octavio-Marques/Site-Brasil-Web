@@ -87,3 +87,10 @@
   opacity: 1;
   cursor: default;
 }
+
+.showDetail {
+  width: 100vw;
+  height: 100vh;
+  transition: width 0.5s ease, height 0.5s ease;
+  object-fit: cover; /* para a imagem preencher o espaço sem distorcer */
+}

@@ -35,10 +35,7 @@ i18n
           },
           carousel: {
             chooseCountry: "Which country would you like to visit?",
-            seeMore: "SEE MORE",
-            accessPage: "ACCESS PAGE",
-            back: "BACK",
-            seeAll: "SEE ALL",
+            seeMore: "VISIT",
           },
           descriptions: {
             japan:
@@ -82,10 +79,7 @@ i18n
           },
           carousel: {
             chooseCountry: "Qual país gostaria de visitar?",
-            seeMore: "VER MAIS",
-            accessPage: "ACESSAR PÁGINA",
-            back: "VOLTAR",
-            seeAll: "VER TODOS",
+            seeMore: "VISITAR",
           },
           descriptions: {
             japan:
@@ -129,10 +123,7 @@ i18n
           },
           carousel: {
             chooseCountry: "どの国に行きたいですか？",
-            seeMore: "もっと見る",
-            accessPage: "ページにアクセス",
-            back: "戻る",
-            seeAll: "すべて見る",
+            seeMore: "訪問",
           },
           descriptions: {
             japan:
@@ -176,10 +167,7 @@ i18n
           },
           carousel: {
             chooseCountry: "Quel pays souhaitez-vous visiter ?",
-            seeMore: "VOIR PLUS",
-            accessPage: "ACCÉDER À LA PAGE",
-            back: "RETOUR",
-            seeAll: "VOIR TOUS",
+            seeMore: "VISITE",
           },
           descriptions: {
             japan:
@@ -223,10 +211,7 @@ i18n
           },
           carousel: {
             chooseCountry: "أي بلد ترغب في زيارته؟",
-            seeMore: "عرض المزيد",
-            accessPage: "الدخول إلى الصفحة",
-            back: "رجوع",
-            seeAll: "عرض الكل",
+            seeMore: "يزور",
           },
           descriptions: {
             japan:

@@ -101,7 +101,7 @@ body {
   margin-top: 1.2em;
   padding: 5px 0;
   border: none;
-  border-bottom: 1px solid #555;
+  border-bottom: 1px solid #333;
   background-color: transparent;
   font-weight: bold;
   letter-spacing: 3px;
@@ -293,7 +293,7 @@ body {
   .item:nth-child(2)
   .checkout
   button:nth-child(2) {
-  background-color: #693eff;
+  background-color: #000;
   color: #eee;
 }
 .carousel.showDetail .list .item:nth-child(2) .detail .title,
@@ -318,7 +318,7 @@ body {
   width: 1140px;
   max-width: 90%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   left: 50%;
   transform: translateX(-50%);
   align-items: center;
@@ -366,7 +366,7 @@ body {
   width: 500px;
   height: 300px;
   content: "";
-  background-image: linear-gradient(70deg, #dc422a, blue);
+  background-image: linear-gradient(70deg, green, blue, red, gold, white);
   position: absolute;
   z-index: -1;
   border-radius: 20% 30% 80% 10%;
