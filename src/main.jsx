@@ -14,7 +14,6 @@ import RightNav from "./components/RightNav";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
-      <RightNav />
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/australia" element={<AustraliaPage />} />

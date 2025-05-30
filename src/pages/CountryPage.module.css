@@ -1,22 +1,22 @@
 /* Fundo */
 .bodyBackgroundAustralia {
-  background: url("../assets/img/Australia.png");
+  background: url("../assets/img/Australia-background.png");
 }
 
 .bodyBackgroundBrazil {
-  background: url("../assets/img/Brazil.png");
+  background: url("../assets/img/Brazil-background.png");
 }
 
 .bodyBackgroundEgypt {
-  background: url("../assets/img/Egypt.png");
+  background: url("../assets/img/Egypt-background.png");
 }
 
 .bodyBackgroundFrance {
-  background: url("../assets/img/France.png");
+  background: url("../assets/img/France-background.png");
 }
 
 .bodyBackgroundJapan {
-  background: url("../assets/img/Japan.png");
+  background: url("../assets/img/Japan-background.png");
 }
 
 /* Nome dos países */

@@ -80,7 +80,10 @@ function CountryPage({
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 1 + index * 0.2 }}
               style={{
-                backgroundColor: i18n.language === lang.code ? buttonLanguageColor : "transparent",
+                backgroundColor:
+                  i18n.language === lang.code
+                    ? buttonLanguageColor
+                    : "transparent",
               }}
             >
               {lang.label}
