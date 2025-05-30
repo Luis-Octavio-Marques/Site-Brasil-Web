@@ -16,7 +16,7 @@ i18n
             gastronomy: "Gastronomy",
             nature: "Nature",
             language: "Language",
-            inspiration: "Inspiration",
+            flag: "Flag",
           },
           title: {
             australiaWeb: "Australia Web",
@@ -60,7 +60,7 @@ i18n
             gastronomy: "Gastronomia",
             nature: "Natureza",
             language: "Língua",
-            inspiration: "Inspiração",
+            flag: "Bandeira",
           },
           title: {
             australiaWeb: "Austrália Web",
@@ -104,7 +104,7 @@ i18n
             gastronomy: "美食",
             nature: "自然",
             language: "言語",
-            inspiration: "インスピレーション",
+            flag: "フラグ",
           },
           title: {
             australiaWeb: "オーストラリア ウェブ",
@@ -148,7 +148,7 @@ i18n
             gastronomy: "Gastronomie",
             nature: "Nature",
             language: "Langue",
-            inspiration: "Inspiration",
+            flag: "Drapeau",
           },
           title: {
             australiaWeb: "Australie Web",
@@ -192,7 +192,7 @@ i18n
             gastronomy: "فن الطهو",
             nature: "الطبيعة",
             language: "اللغة",
-            inspiration: "إلهام",
+            flag: "علَم",
           },
           title: {
             australiaWeb: "أستراليا ويب",

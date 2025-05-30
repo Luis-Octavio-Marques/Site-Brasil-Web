@@ -25,7 +25,7 @@ function RightNav() {
         const showBottomLine = isSelected && index !== pages.length - 1;
 
         return (
-          <div key={page.label} className="right-nav-item-wrapper">
+          <div key={page.label} className={`right-nav-item-wrapper ${isSelected ? "expanded" : ""}`}>
             {showTopLine && <div className="right-line" />}
             <div
               className={`right-nav-item ${isSelected ? "selected" : ""}`}

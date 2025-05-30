@@ -10,7 +10,7 @@ function Header({ titleKey }) {
     { key: "gastronomy" },
     { key: "nature" },
     { key: "language" },
-    { key: "inspiration" },
+    { key: "flag" },
   ];
 
   return (

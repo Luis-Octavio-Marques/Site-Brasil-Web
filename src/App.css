@@ -68,6 +68,7 @@ body {
   top: 50%;
   transform: translateY(-50%);
   transition: right 1.5s;
+  border-radius: 15px;
 }
 
 .carousel .list .item .introduce {
@@ -426,4 +427,19 @@ body {
     width: max-content;
     float: right;
   }
+}
+
+.slide-in,
+.slide-out {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: black;
+  transform-origin: top;
+  z-index: 1000;
+}
+.slide-out {
+  transform-origin: bottom;
 }
