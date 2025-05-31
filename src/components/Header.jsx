@@ -1,16 +1,21 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { Link, useLocation } from "react-router-dom";
 
 function Header({ titleKey }) {
   const { t } = useTranslation();
+  const location = useLocation();
+
+  // Pegando o primeiro segmento da URL como origem
+  const currentSection = location.pathname.split("/")[1] || "default";
 
   const menuItems = [
-    { key: "history" },
-    { key: "culture" },
-    { key: "gastronomy" },
-    { key: "nature" },
-    { key: "language" },
-    { key: "flag" },
+    { key: "history", link: "/history" },
+    { key: "culture", link: "/culture" },
+    { key: "gastronomy", link: "/gastronomy" },
+    { key: "nature", link: "/nature" },
+    { key: "language", link: "/language" },
+    { key: "flag", link: "/flag" },
   ];
 
   return (
@@ -21,24 +26,25 @@ function Header({ titleKey }) {
         backgroundColor: "rgba(0, 0, 0, .15)",
       }}
     >
-      <a href="/" className="flex items-center gap-2 group">
+      <Link to="/" className="flex items-center gap-2 group">
         <h2 className="text-[26px] text-white font-light tracking-wider relative">
           {t(titleKey)}
           <div className="absolute -bottom-1 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
         </h2>
-      </a>
+      </Link>
 
-      {/* Separador minimalista */}
       <div className="w-[1px] h-6 bg-white/20"></div>
 
       <nav className="flex items-center">
         <ul className="flex gap-7 list-none">
-          {menuItems.map(({ key }) => (
+          {menuItems.map(({ key, link }) => (
             <li
               key={key}
               className="cursor-pointer font-light text-white/90 hover:text-white transition-colors duration-300"
             >
-              {t(`menu.${key}`)}
+              <Link to={link} state={{ origin: currentSection }}>
+                {t(`menu.${key}`)}
+              </Link>
             </li>
           ))}
         </ul>
