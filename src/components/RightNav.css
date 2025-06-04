@@ -16,6 +16,7 @@
   align-items: center;
   gap: 5px;
   transition: gap 0.4s ease;
+  width: 30px;
 }
 
 .right-nav-item-wrapper.expanded {
@@ -23,7 +24,7 @@
 }
 
 .right-line {
-  width: 3.5px;
+  width: 3px;
   height: 0;
   background-color: white;
   border-radius: 15px;

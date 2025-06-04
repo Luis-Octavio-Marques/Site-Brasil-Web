@@ -6,11 +6,13 @@ import "./i18n";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // Páginas principais
-import AustraliaPage from "./pages/AustraliaPage";
-import BrazilPage from "./pages/BrazilPage";
-import EgyptPage from "./pages/EgyptPage";
-import FrancePage from "./pages/FrancePage";
-import JapanPage from "./pages/JapanPage";
+import History from "./pages/History.jsx";
+import Culture from "./pages/Culture.jsx";
+import Gastronomy from "./pages/Gastronomy.jsx";
+import Nature from "./pages/Nature.jsx";
+import Language from "./pages/Language.jsx";
+import Flag from "./pages/Flag.jsx";
+
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -19,14 +21,13 @@ createRoot(document.getElementById("root")).render(
         {/* Página inicial */}
         <Route path="/" element={<App />} />
 
-        {/* Páginas principais dos países */}
-        <Route path="/australia" element={<AustraliaPage />} />
-        <Route path="/brazil" element={<BrazilPage />} />
-        <Route path="/egypt" element={<EgyptPage />} />
-        <Route path="/france" element={<FrancePage />} />
-        <Route path="/japan" element={<JapanPage />} />
-
         {/* Rotas dinâmicas para cada país */}
+        <Route path="/history" element={<History />} />
+        <Route path="/culture" element={<Culture />} />
+        <Route path="/gastronomy" element={<Gastronomy />} />
+        <Route path="/nature" element={<Nature />} />
+        <Route path="/language" element={<Language />} />
+        <Route path="/flag" element={<Flag />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>

@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useLocation } from "react-router-dom";
 
-function Header({ titleKey }) {
+function Header() {
   const { t } = useTranslation();
   const location = useLocation();
 
@@ -20,7 +20,7 @@ function Header({ titleKey }) {
 
   return (
     <header
-      className="fixed flex items-center justify-center text-center w-full gap-8 border-b border-white text-white backdrop-blur-sm"
+      className="fixed flex items-center justify-center text-center w-full gap-8 border-b border-white text-white backdrop-blur-sm z-50"
       style={{
         padding: "20px 15px",
         backgroundColor: "rgba(0, 0, 0, .15)",
@@ -28,7 +28,7 @@ function Header({ titleKey }) {
     >
       <Link to="/" className="flex items-center gap-2 group">
         <h2 className="text-[26px] text-white font-light tracking-wider relative">
-          {t(titleKey)}
+          {t(`title.brazilWeb`)}
           <div className="absolute -bottom-1 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
         </h2>
       </Link>
