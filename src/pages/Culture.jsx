@@ -1,11 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  Music,
-  MapPin,
-  Users,
-  Palette,
-  Calendar,
-} from "lucide-react";
+import { Music, MapPin, Users, Palette, Calendar } from "lucide-react";
 
 import brazilBackgroundCulture from "../assets/img/country-backgrounds/Brazil-background3.png";
 import Header from "../components/Header";
@@ -18,11 +12,6 @@ export default function Culture() {
 
   const [activeSection, setActiveSection] = useState("intro");
   const [visibleCards, setVisibleCards] = useState([]);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -119,11 +108,7 @@ export default function Culture() {
   ];
 
   return (
-    <div
-      className={`min-h-screen transition-all duration-1000 overflow-x-hidden ${
-        isVisible ? "opacity-100" : "opacity-0"
-      }`}
-    >
+    <div className="min-h-screen transition-all duration-1000 overflow-x-hidden">
       {/* Header */}
       <Header />
 
@@ -437,7 +422,9 @@ export default function Culture() {
                 >
                   {t(`culture.partiessubtitle1`)}
                 </h3>
-                <p className="text-white/90">{t(`culture.partiessubdescription1`)}</p>
+                <p className="text-white/90">
+                  {t(`culture.partiessubdescription1`)}
+                </p>
               </div>
 
               {/* Impacto Social */}
@@ -451,7 +438,9 @@ export default function Culture() {
                 >
                   {t(`culture.partiessubtitle2`)}
                 </h3>
-                <p className="text-white/90">{t(`culture.partiessubdescription2`)}</p>
+                <p className="text-white/90">
+                  {t(`culture.partiessubdescription2`)}
+                </p>
               </div>
             </div>
 
@@ -854,22 +843,6 @@ export default function Culture() {
           </section>
         )}
       </main>
-
-      <style jsx>{`
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        .animate-fadeIn {
-          animation: fadeIn 0.6s ease-out forwards;
-        }
-      `}</style>
     </div>
   );
 }

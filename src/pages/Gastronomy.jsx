@@ -1136,7 +1136,9 @@ export default function Gastronomy() {
   }, [selectedPrato]);
 
   return (
-    <div>
+    <div
+      className={`min-h-screen transition-all duration-1000 overflow-x-hidden`}
+    >
       <Header />
 
       {/* Tela Inicial */}
@@ -1524,6 +1526,22 @@ export default function Gastronomy() {
           </div>
         </div>
       )}
+
+      <style jsx>{`
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        .animate-fadeIn {
+          animation: fadeIn 0.6s ease-out forwards;
+        }
+      `}</style>
     </div>
   );
 }

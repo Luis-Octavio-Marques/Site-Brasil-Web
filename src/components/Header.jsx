@@ -20,7 +20,7 @@ function Header() {
 
   return (
     <header
-      className="fixed flex items-center justify-center text-center w-full gap-8 border-b border-white text-white backdrop-blur-sm z-50"
+      className="fixed flex items-center justify-center text-center w-full gap-8 border-b border-white text-white backdrop-blur-sm z-50 animate-fadeIn"
       style={{
         padding: "20px 15px",
         backgroundColor: "rgba(0, 0, 0, .15)",
@@ -49,6 +49,22 @@ function Header() {
           ))}
         </ul>
       </nav>
+
+      <style jsx>{`
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        .animate-fadeIn {
+          animation: fadeIn 0.6s ease-out forwards;
+        }
+      `}</style>
     </header>
   );
 }

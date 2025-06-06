@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import historyImage1 from "./../assets/img/country-history/history-image1.png";
 import historyImage2 from "./../assets/img/country-history/history-image2.png";
@@ -178,11 +178,6 @@ export default function History() {
   const { t } = useTranslation();
 
   const [expandedItems, setExpandedItems] = useState(new Set());
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
 
   const toggleExpanded = (index) => {
     const newExpanded = new Set(expandedItems);
@@ -382,11 +377,7 @@ export default function History() {
   ];
 
   return (
-    <div
-      className={`min-h-screen transition-all duration-1000 overflow-x-hidden ${
-        isVisible ? "opacity-100" : "opacity-0"
-      }`}
-    >
+    <div className="min-h-screen transition-all duration-1000 overflow-x-hidden">
       {/* Header */}
       <Header />
 
