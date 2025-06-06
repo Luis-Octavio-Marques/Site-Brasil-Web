@@ -19,7 +19,7 @@ export default function LanguageButton() {
       <motion.div
         className="absolute bottom-0 left-0"
         style={{ margin: "15px" }}
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.9 }}
       >

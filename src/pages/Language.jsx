@@ -27,13 +27,6 @@ export default function Language() {
         <h2 className="text-6xl font-bold border-b-4 border-white">
           {t(`language.title`)}
         </h2>
-        <p
-          className="text-white text-2xl font-bold"
-          style={{ marginTop: "12px" }}
-        >
-          {" "}
-          Ô, chega mais! Aqui é tua casa!
-        </p>
 
         <LanguageButton />
       </div>

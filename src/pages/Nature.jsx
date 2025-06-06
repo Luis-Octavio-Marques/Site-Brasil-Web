@@ -27,13 +27,6 @@ export default function Nature() {
         <h2 className="text-6xl font-bold border-b-4 border-white">
           {t(`nature.title`)}
         </h2>
-        <p
-          className="text-white text-2xl font-bold"
-          style={{ marginTop: "12px" }}
-        >
-          {" "}
-          Esse verde é a nossa primeira língua
-        </p>
 
         <LanguageButton />
       </div>
