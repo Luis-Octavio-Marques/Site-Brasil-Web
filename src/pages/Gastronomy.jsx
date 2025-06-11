@@ -3,12 +3,8 @@ import { ChefHat, MapPin, Clock, Users, Star, BookOpen } from "lucide-react";
 
 import brazilBackgroundGastronomy from "../assets/img/country-backgrounds/Brazil-background4.png";
 import Header from "../components/Header";
-import LanguageButton from "../components/LanguageButton";
-import { useTranslation } from "react-i18next";
 
 export default function Gastronomy() {
-  const { t } = useTranslation();
-
   const [selectedPrato, setSelectedPrato] = useState(null);
   const [activeRegiao, setActiveRegiao] = useState("todos");
 
@@ -724,10 +720,39 @@ export default function Gastronomy() {
       imagem: "🌽",
       cor: "bg-gradient-to-r from-gray-700 to-gray-900",
     },
+    {
+      id: 24,
+      nome: "Sopa Paraguaia",
+      regiao: "Centro-Oeste",
+      origem:
+        "Apesar do nome, é um pão-salgado à base de milho, consumido no Centro-Oeste.",
+      descricao: "Torta salgada de milho, queijo e cebola, densa e saborosa.",
+      ingredientes: [
+        "2 xícaras de farinha de milho",
+        "1 lata de milho verde",
+        "1 cebola picada",
+        "200g de queijo",
+        "3 ovos",
+        "1 copo de leite",
+        "Fermento em pó",
+        "Sal e óleo",
+      ],
+      preparo: [
+        "Refogue a cebola e deixe esfriar.",
+        "Misture ovos, leite, milho, farinha e fermento.",
+        "Incorpore a cebola refogada e o queijo.",
+        "Coloque em forma untada e asse a 180 °C por 40 minutos.",
+      ],
+      tempo: "1 Horas",
+      pessoas: "6 pessoas",
+      dificuldade: "Fácil",
+      imagem: "🌽",
+      cor: "bg-gradient-to-r from-gray-700 to-gray-900",
+    },
 
     // Sul
     {
-      id: 30,
+      id: 25,
       nome: "Churrasco Gaúcho",
       regiao: "Sul",
       origem:
@@ -754,7 +779,7 @@ export default function Gastronomy() {
       cor: "bg-gradient-to-r from-gray-700 to-gray-900",
     },
     {
-      id: 31,
+      id: 26,
       nome: "Barreado",
       regiao: "Sul",
       origem:
@@ -783,7 +808,7 @@ export default function Gastronomy() {
       cor: "bg-gradient-to-r from-gray-700 to-gray-900",
     },
     {
-      id: 32,
+      id: 27,
       nome: "Pinhão Cozido",
       regiao: "Sul",
       origem:
@@ -808,7 +833,7 @@ export default function Gastronomy() {
       cor: "bg-gradient-to-r from-gray-700 to-gray-900",
     },
     {
-      id: 33,
+      id: 28,
       nome: "Cuca Alemã",
       regiao: "Sul",
       origem:
@@ -839,7 +864,7 @@ export default function Gastronomy() {
       cor: "bg-gradient-to-r from-gray-700 to-gray-900",
     },
     {
-      id: 34,
+      id: 29,
       nome: "Entrevero",
       regiao: "Sul",
       origem: "Prato típico dos pampas e serras, mistura carnes e legumes.",
@@ -867,7 +892,7 @@ export default function Gastronomy() {
       cor: "bg-gradient-to-r from-gray-700 to-gray-900",
     },
     {
-      id: 35,
+      id: 30,
       nome: "Sopa de Capeletti",
       regiao: "Sul",
       origem:
@@ -894,40 +919,11 @@ export default function Gastronomy() {
       imagem: "🍜",
       cor: "bg-gradient-to-r from-gray-700 to-gray-900",
     },
-    {
-      id: 36,
-      nome: "Sopa Paraguaia",
-      regiao: "Centro-Oeste",
-      origem:
-        "Apesar do nome, é um pão-salgado à base de milho, consumido no Centro-Oeste.",
-      descricao: "Torta salgada de milho, queijo e cebola, densa e saborosa.",
-      ingredientes: [
-        "2 xícaras de farinha de milho",
-        "1 lata de milho verde",
-        "1 cebola picada",
-        "200g de queijo",
-        "3 ovos",
-        "1 copo de leite",
-        "Fermento em pó",
-        "Sal e óleo",
-      ],
-      preparo: [
-        "Refogue a cebola e deixe esfriar.",
-        "Misture ovos, leite, milho, farinha e fermento.",
-        "Incorpore a cebola refogada e o queijo.",
-        "Coloque em forma untada e asse a 180 °C por 40 minutos.",
-      ],
-      tempo: "1 Horas",
-      pessoas: "6 pessoas",
-      dificuldade: "Fácil",
-      imagem: "🌽",
-      cor: "bg-gradient-to-r from-gray-700 to-gray-900",
-    },
 
     // Sudeste
     {
-      id: 24,
-      nome: "Feijoada",
+      id: 31,
+      nome: "Feijoada do Sudeste",
       regiao: "Sudeste",
       origem:
         "Prato símbolo do Brasil, surgiu no Rio de Janeiro como aproveitamento das carnes menos nobres.",
@@ -960,7 +956,7 @@ export default function Gastronomy() {
       cor: "bg-gradient-to-r from-gray-700 to-gray-900",
     },
     {
-      id: 25,
+      id: 32,
       nome: "Pão de Açúcar Mineiro",
       regiao: "Sudeste",
       origem:
@@ -989,7 +985,7 @@ export default function Gastronomy() {
       cor: "bg-gradient-to-r from-gray-700 to-gray-900",
     },
     {
-      id: 26,
+      id: 33,
       nome: "Pão de Queijo",
       regiao: "Sudeste",
       origem:
@@ -1019,7 +1015,7 @@ export default function Gastronomy() {
       cor: "bg-gradient-to-r from-gray-700 to-gray-900",
     },
     {
-      id: 27,
+      id: 34,
       nome: "Feijão Tropeiro",
       regiao: "Sudeste",
       origem:
@@ -1049,7 +1045,7 @@ export default function Gastronomy() {
       cor: "bg-gradient-to-r from-gray-700 to-gray-900",
     },
     {
-      id: 28,
+      id: 35,
       nome: "Brigadeiro Gourmet",
       regiao: "Sudeste",
       origem:
@@ -1076,7 +1072,7 @@ export default function Gastronomy() {
       cor: "bg-gradient-to-r from-gray-700 to-gray-900",
     },
     {
-      id: 29,
+      id: 36,
       nome: "Pudim de Leite",
       regiao: "Sudeste",
       origem:
@@ -1154,378 +1150,383 @@ export default function Gastronomy() {
         <div className="absolute inset-0 bg-black/40 -z-10"></div>
         <div>
           <h2 className="text-6xl font-bold border-b-4 border-white">
-            {t(`gastronomy.title`)}
+            Gastronomia do Brasil
           </h2>
         </div>
-        <LanguageButton />
       </div>
 
-      {/* Introdução */}
-      <section className="animate-fadeIn">
-        <div
-          className="bg-white/5 backdrop-blur-md border-white border-1 rounded-lg"
-          style={{
-            margin: "32px",
-            paddingLeft: "32px",
-            paddingRight: "32px",
-            paddingTop: "32px",
-            paddingBottom: "32px",
-          }}
-        >
-          <h2
-            className="text-4xl font-bold text-white text-center"
-            style={{ marginBottom: "16px" }}
-          >
-            Bem-vindos à Mesa Brasileira
-          </h2>
-          <div className="grid" style={{ gap: "32px" }}>
-            <div
-              className="space-y-4 text-white/90 text-lg leading-relaxed"
-              style={{ gap: "16px" }}
-            >
-              <p className="leading-relaxed text-center">
-                A culinária brasileira é uma festa de sabores que conta a
-                história do nosso país. Mistura influências indígenas, africanas
-                e portuguesas, criando pratos únicos que despertam os sentidos e
-                aquecem o coração. Cada região tem seus segredos culinários,
-                passados de geração em geração.
-              </p>
-            </div>
-          </div>
-          <div
-            className="grid md:grid-cols-3 gap-8"
-            style={{ marginTop: "2rem" }}
-          >
-            <div
-              className="bg-white/10 backdrop-blur-md border-white border-1 rounded-lg shadow-lg text-center text-lg text-white"
-              style={{ padding: "2rem" }}
-            >
-              <h3
-                className="text-2xl font-semibold"
-                style={{ marginBottom: "0.5rem" }}
-              >
-                {" "}
-                🌎 Diversidade Regional
-              </h3>
-              <p>
-                Cada região brasileira possui características culinárias únicas
-              </p>
-            </div>
-            <div
-              className="bg-white/10 backdrop-blur-md border-white border-1 rounded-lg shadow-lg text-center text-lg text-white"
-              style={{ padding: "2rem" }}
-            >
-              <h3
-                className="text-2xl font-semibold"
-                style={{ marginBottom: "0.5rem" }}
-              >
-                {" "}
-                🍽️ Fusão Cultural{" "}
-              </h3>
-              <p>
-                Influências indígenas, africanas e europeias em perfeita
-                harmonia
-              </p>
-            </div>
-            <div
-              className="bg-white/10 backdrop-blur-md border-white border-1 rounded-lg shadow-lg text-center text-lg text-white"
-              style={{ padding: "2rem" }}
-            >
-              <h3
-                className="text-2xl font-semibold"
-                style={{ marginBottom: "0.5rem" }}
-              >
-                🎯 Patrimônio Nacional
-              </h3>
-              <p>
-                Pratos que são verdadeiros símbolos da identidade brasileira
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Filtros por Região */}
-      <section
-        className="container mx-auto px-6"
-        style={{ padding: "2rem 1.5rem" }}
-      >
-        <div className="flex flex-wrap justify-center gap-4 mb-8">
-          {regioes.map((regiao) => (
-            <button
-              key={regiao}
-              onClick={() => setActiveRegiao(regiao)}
-              style={{ paddingInline: "1.5rem", paddingBlock: "0.5rem" }}
-              className={`rounded-full transition-all duration-300 transform hover:scale-105 ${
-                activeRegiao === regiao
-                  ? "bg-white text-black shadow-lg scale-105"
-                  : "bg-white/20 text-white hover:bg-white/30 hover:scale-105"
-              }`}
-            >
-              {regiao === "todos" ? "Todas as Regiões" : regiao}
-            </button>
-          ))}
-        </div>
-      </section>
-
-      {/* Grid de Pratos */}
-      <section
-        className="container mx-auto"
+      {/* Main */}
+      <main
         style={{
-          marginInline: "auto",
-          padding: "0 1.5rem 4rem",
-          paddingInline: "1.5rem",
+          marginLeft: "24px",
+          marginRight: "24px",
+          paddingLeft: "6px",
+          paddingRight: "6px",
+          paddingTop: "12px",
+          paddingBottom: "12px",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
         }}
       >
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {pratosFiltrados.map((prato) => (
-            <div
-              key={prato.id}
-              className="bg-white/20 backdrop-blur-md border-white border-1 rounded-lg shadow-xl overflow-hidden transform transition-all duration-300 hover:scale-102 hover:shadow-2xl cursor-pointer text-white"
-              onClick={() => setSelectedPrato(prato)}
+        {/* Introdução */}
+        <section className="animate-fadeIn">
+          <div
+            className="bg-white/5 backdrop-blur-md border-white border-1 rounded-lg"
+            style={{
+              margin: "32px",
+              paddingLeft: "32px",
+              paddingRight: "32px",
+              paddingTop: "32px",
+              paddingBottom: "32px",
+            }}
+          >
+            <h2
+              className="text-4xl font-bold text-white text-center"
+              style={{ marginBottom: "16px" }}
             >
+              Bem-vindos à Mesa Brasileira
+            </h2>
+            <div className="grid" style={{ gap: "32px" }}>
               <div
-                className={`h-32 bg-gradient-to-r ${prato.cor} flex items-center justify-center text-6xl`}
+                className="space-y-4 text-white/90 text-lg leading-relaxed"
+                style={{ gap: "16px" }}
               >
-                {prato.imagem}
-              </div>
-              <div style={{ padding: "1.5rem" }}>
-                <div
-                  className="flex items-center justify-between"
-                  style={{ marginBottom: "0.75rem" }}
-                >
-                  <h3 className="text-lg font-bold">{prato.nome}</h3>
-                  <span
-                    className="bg-blue-100 text-blue-800 rounded-full text-sm font-medium"
-                    style={{
-                      paddingInline: "0.75rem",
-                      paddingBlock: "0.25rem",
-                    }}
-                  >
-                    {prato.regiao}
-                  </span>
-                </div>
-                <p className="line-clamp-3" style={{ marginBottom: "1rem" }}>
-                  {prato.descricao}
+                <p className="leading-relaxed text-center">
+                  A culinária brasileira é uma festa de sabores que conta a
+                  história do nosso país. Mistura influências indígenas,
+                  africanas e portuguesas, criando pratos únicos que despertam
+                  os sentidos e aquecem o coração. Cada região tem seus segredos
+                  culinários, passados de geração em geração.
                 </p>
-                <div className="flex items-center justify-between text-sm">
-                  <div
-                    className="flex items-center"
-                    style={{
-                      marginInlineStart: "0.25rem",
-                      marginInlineEnd: "0.25rem",
-                    }}
-                  >
-                    <Clock size={16} style={{ marginRight: "0.25rem" }} />
-                    <span>{prato.tempo}</span>
-                  </div>
-                  <div
-                    className="flex items-center"
-                    style={{
-                      marginInlineStart: "0.25rem",
-                      marginInlineEnd: "0.25rem",
-                    }}
-                  >
-                    <Users size={16} style={{ marginRight: "0.5rem" }} />
-                    <span>{prato.pessoas}</span>
-                  </div>
-                </div>
-                <div
-                  className="flex items-center justify-between"
-                  style={{ marginTop: "1rem" }}
-                >
-                  <span
-                    className={`px-3 py-1 rounded-full text-sm ${
-                      prato.dificuldade === "Fácil"
-                        ? "bg-green-100 text-green-800"
-                        : prato.dificuldade === "Médio"
-                        ? "bg-yellow-100 text-yellow-800"
-                        : "bg-red-100 text-red-800"
-                    }`}
-                    style={{
-                      paddingInline: "0.75rem",
-                      paddingBlock: "0.25rem",
-                    }}
-                  >
-                    {prato.dificuldade}
-                  </span>
-                  <button                  
-                    className="bg-green-700 text-white hover:from-green-600 hover:to-blue-600 transition-all duration-300 rounded-[12px] border-2 border-white font-bold cursor-pointer"
-                    style={{
-                      paddingInline: "0.75rem",
-                      paddingBlock: "0.25rem",
-                    }}
-                  >
-                    Ver Receita
-                  </button>
-                </div>
               </div>
             </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Modal de Receita */}
-      {selectedPrato && (
-        <div
-          className="fixed inset-0 bg-black/95 flex items-center justify-center z-50"
-          style={{ padding: "1rem" }}
-        >
-          <div className="bg-gradient-to-br from-green-400 via-blue-500 to-yellow-400 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto text-white">
             <div
-              className={`h-40 bg-gradient-to-r ${selectedPrato.cor} flex items-center justify-center text-8xl relative`}
+              className="grid md:grid-cols-3 gap-8"
+              style={{ marginTop: "2rem" }}
             >
-              {selectedPrato.imagem}
-              <button
-                onClick={() => setSelectedPrato(null)}
-                className="absolute top-4 right-4 bg-white bg-opacity-20 hover:bg-opacity-30 text-black rounded-full w-10 h-10 flex items-center justify-center text-xl font-bold transition-all duration-300 cursor-pointer"
-              >
-                ×
-              </button>
-            </div>
-            <div style={{ padding: "2rem" }}>
               <div
-                className="flex items-center justify-between"
-                style={{ marginBottom: "1.5rem" }}
+                className="bg-white/10 backdrop-blur-md border-white border-1 rounded-lg shadow-lg text-center text-lg text-white"
+                style={{ padding: "2rem" }}
               >
-                <h2 className="text-4xl font-bold">
-                  {selectedPrato.nome}
-                </h2>
-                <span
-                  className="bg-blue-100 text-blue-800 rounded-full font-medium"
-                  style={{ paddingInline: "1rem", paddingBlock: "0.5rem" }}
-                >
-                  {selectedPrato.regiao}
-                </span>
-              </div>
-
-              <div
-                className="grid md:grid-cols-3 gap-6 mb-8"
-                style={{ marginBottom: "2rem" }}
-              >
-                <div
-                  className="bg-white/20 backdrop-blur-md border-white border-1 rounded-lg text-center"
-                  style={{ padding: "1rem" }}
-                >
-                  <Clock
-                    style={{ marginBottom: "0.5rem", marginInline: "auto" }}
-                    size={28}
-                  />
-                  <p className="font-semibold text-lg">Tempo</p>
-                  <p className="text-md">{selectedPrato.tempo}</p>
-                </div>
-                <div
-                  className="bg-white/20 backdrop-blur-md border-white border-1 rounded-lg text-center"
-                  style={{ padding: "1rem" }}
-                >
-                  <Users
-                    style={{ marginBottom: "0.5rem", marginInline: "auto" }}
-                    size={28}
-                  />
-                  <p className="font-semibold text-lg">Porções</p>
-                  <p className="text-md">{selectedPrato.pessoas}</p>
-                </div>
-                <div
-                  className="bg-white/20 backdrop-blur-md border-white border-1 rounded-lg text-center"
-                  style={{ padding: "1rem" }}
-                >
-                  <Star
-                    style={{ marginBottom: "0.5rem", marginInline: "auto" }}
-                    size={28}
-                  />
-                  <p className="font-semibold text-lg">Dificuldade</p>
-                  <p className="text-md">{selectedPrato.dificuldade}</p>
-                </div>
-              </div>
-
-              <div style={{ marginBottom: "2rem" }}>
                 <h3
-                  className="text-2xl font-semibold flex items-center"
-                  style={{ marginBottom: "1rem" }}
+                  className="text-2xl font-semibold"
+                  style={{ marginBottom: "0.5rem" }}
                 >
-                  <MapPin
-                    style={{ marginRight: "0.5rem" }}
-                  />
-                  Origem e História
+                  {" "}
+                  🌎 Diversidade Regional
                 </h3>
-                <p
-                  className="bg-white/10 backdrop-blur-md border-white border-1 rounded-lg text-center text-md font-semibold leading-relaxed flex justify-center"
-                  style={{ padding: "1rem" }}
-                >
-                  {selectedPrato.origem}
+                <p>
+                  Cada região brasileira possui características culinárias
+                  únicas
                 </p>
               </div>
+              <div
+                className="bg-white/10 backdrop-blur-md border-white border-1 rounded-lg shadow-lg text-center text-lg text-white"
+                style={{ padding: "2rem" }}
+              >
+                <h3
+                  className="text-2xl font-semibold"
+                  style={{ marginBottom: "0.5rem" }}
+                >
+                  {" "}
+                  🍽️ Fusão Cultural{" "}
+                </h3>
+                <p>
+                  Influências indígenas, africanas e europeias em perfeita
+                  harmonia
+                </p>
+              </div>
+              <div
+                className="bg-white/10 backdrop-blur-md border-white border-1 rounded-lg shadow-lg text-center text-lg text-white"
+                style={{ padding: "2rem" }}
+              >
+                <h3
+                  className="text-2xl font-semibold"
+                  style={{ marginBottom: "0.5rem" }}
+                >
+                  🎯 Patrimônio Nacional
+                </h3>
+                <p>
+                  Pratos que são verdadeiros símbolos da identidade brasileira
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
 
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <h3
-                    className="text-2xl font-semibold flex items-center"
-                    style={{ marginBottom: "1rem" }}
-                  >
-                    <BookOpen
-                      style={{ marginRight: "0.5rem" }}
-                    />
-                    Ingredientes
-                  </h3>
-                  <ul
-                    style={{
-                      marginBlockStart: "0.5rem",
-                      marginBlockEnd: "0.5rem",
-                    }}
-                  >
-                    {selectedPrato.ingredientes.map((ingrediente, index) => (
-                      <li
-                        key={index}
-                        className="bg-white/10 backdrop-blur-md border-white border-1 rounded-lg flex items-center"
-                        style={{ padding: "1rem", marginBottom: "0.5rem" }}
-                      >
-                        <div
-                          style={{ marginRight: "0.75rem" }}
-                        >
-                          {ingrediente}
-                        </div>
-                      </li>
-                    ))}
-                  </ul>
+        {/* Filtros por Região */}
+        <section
+          className="container mx-auto px-6"
+          style={{ padding: "2rem 1.5rem" }}
+        >
+          <div className="flex flex-wrap justify-center gap-4 mb-8">
+            {regioes.map((regiao) => (
+              <button
+                key={regiao}
+                onClick={() => setActiveRegiao(regiao)}
+                style={{ paddingInline: "1.5rem", paddingBlock: "0.5rem" }}
+                className={`rounded-full transition-all duration-300 transform hover:scale-105 ${
+                  activeRegiao === regiao
+                    ? "bg-white text-black shadow-lg scale-105"
+                    : "bg-white/20 text-white hover:bg-white/30 hover:scale-105"
+                }`}
+              >
+                {regiao === "todos" ? "Todas as Regiões" : regiao}
+              </button>
+            ))}
+          </div>
+        </section>
+
+        {/* Grid de Pratos */}
+        <section
+          className="container mx-auto"
+          style={{
+            marginInline: "auto",
+            padding: "0 1.5rem 4rem",
+            paddingInline: "1.5rem",
+          }}
+        >
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {pratosFiltrados.map((prato) => (
+              <div
+                key={prato.id}
+                className="bg-white/20 backdrop-blur-md border-white border-1 rounded-lg shadow-xl overflow-hidden transform transition-all duration-300 hover:scale-102 hover:shadow-2xl cursor-pointer text-white"
+                onClick={() => setSelectedPrato(prato)}
+              >
+                <div
+                  className={`h-32 bg-gradient-to-r ${prato.cor} flex items-center justify-center text-6xl`}
+                >
+                  {prato.imagem}
                 </div>
-                <div>
+                <div style={{ padding: "1.5rem" }}>
+                  <div
+                    className="flex items-center justify-between"
+                    style={{ marginBottom: "0.75rem" }}
+                  >
+                    <h3 className="text-lg font-bold">{prato.nome}</h3>
+                    <span
+                      className="bg-blue-100 text-blue-800 rounded-full text-sm font-medium"
+                      style={{
+                        paddingInline: "0.75rem",
+                        paddingBlock: "0.25rem",
+                      }}
+                    >
+                      {prato.regiao}
+                    </span>
+                  </div>
+                  <p className="line-clamp-3" style={{ marginBottom: "1rem" }}>
+                    {prato.descricao}
+                  </p>
+                  <div className="flex items-center justify-between text-sm">
+                    <div
+                      className="flex items-center"
+                      style={{
+                        marginInlineStart: "0.25rem",
+                        marginInlineEnd: "0.25rem",
+                      }}
+                    >
+                      <Clock size={16} style={{ marginRight: "0.25rem" }} />
+                      <span>{prato.tempo}</span>
+                    </div>
+                    <div
+                      className="flex items-center"
+                      style={{
+                        marginInlineStart: "0.25rem",
+                        marginInlineEnd: "0.25rem",
+                      }}
+                    >
+                      <Users size={16} style={{ marginRight: "0.5rem" }} />
+                      <span>{prato.pessoas}</span>
+                    </div>
+                  </div>
+                  <div
+                    className="flex items-center justify-between"
+                    style={{ marginTop: "1rem" }}
+                  >
+                    <span
+                      className={`px-3 py-1 rounded-full text-sm ${
+                        prato.dificuldade === "Fácil"
+                          ? "bg-green-100 text-green-800"
+                          : prato.dificuldade === "Médio"
+                          ? "bg-yellow-100 text-yellow-800"
+                          : "bg-red-100 text-red-800"
+                      }`}
+                      style={{
+                        paddingInline: "0.75rem",
+                        paddingBlock: "0.25rem",
+                      }}
+                    >
+                      {prato.dificuldade}
+                    </span>
+                    <button
+                      className="bg-green-700 text-white hover:from-green-600 hover:to-blue-600 transition-all duration-300 rounded-[12px] border-2 border-white font-bold cursor-pointer"
+                      style={{
+                        paddingInline: "0.75rem",
+                        paddingBlock: "0.25rem",
+                      }}
+                    >
+                      Ver Receita
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Modal de Receita */}
+        {selectedPrato && (
+          <div
+            className="fixed inset-0 bg-black/95 flex items-center justify-center z-50"
+            style={{ padding: "1rem" }}
+          >
+            <div className="bg-gradient-to-br from-green-400 via-blue-500 to-yellow-400 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto text-white">
+              <div
+                className={`h-40 bg-gradient-to-r ${selectedPrato.cor} flex items-center justify-center text-8xl relative`}
+              >
+                {selectedPrato.imagem}
+                <button
+                  onClick={() => setSelectedPrato(null)}
+                  className="absolute top-4 right-4 bg-white bg-opacity-20 hover:bg-opacity-30 text-black rounded-full w-10 h-10 flex items-center justify-center text-xl font-bold transition-all duration-300 cursor-pointer"
+                >
+                  ×
+                </button>
+              </div>
+              <div style={{ padding: "2rem" }}>
+                <div
+                  className="flex items-center justify-between"
+                  style={{ marginBottom: "1.5rem" }}
+                >
+                  <h2 className="text-4xl font-bold">{selectedPrato.nome}</h2>
+                  <span
+                    className="bg-blue-100 text-blue-800 rounded-full font-medium"
+                    style={{ paddingInline: "1rem", paddingBlock: "0.5rem" }}
+                  >
+                    {selectedPrato.regiao}
+                  </span>
+                </div>
+
+                <div
+                  className="grid md:grid-cols-3 gap-6 mb-8"
+                  style={{ marginBottom: "2rem" }}
+                >
+                  <div
+                    className="bg-white/20 backdrop-blur-md border-white border-1 rounded-lg text-center"
+                    style={{ padding: "1rem" }}
+                  >
+                    <Clock
+                      style={{ marginBottom: "0.5rem", marginInline: "auto" }}
+                      size={28}
+                    />
+                    <p className="font-semibold text-lg">Tempo</p>
+                    <p className="text-md">{selectedPrato.tempo}</p>
+                  </div>
+                  <div
+                    className="bg-white/20 backdrop-blur-md border-white border-1 rounded-lg text-center"
+                    style={{ padding: "1rem" }}
+                  >
+                    <Users
+                      style={{ marginBottom: "0.5rem", marginInline: "auto" }}
+                      size={28}
+                    />
+                    <p className="font-semibold text-lg">Porções</p>
+                    <p className="text-md">{selectedPrato.pessoas}</p>
+                  </div>
+                  <div
+                    className="bg-white/20 backdrop-blur-md border-white border-1 rounded-lg text-center"
+                    style={{ padding: "1rem" }}
+                  >
+                    <Star
+                      style={{ marginBottom: "0.5rem", marginInline: "auto" }}
+                      size={28}
+                    />
+                    <p className="font-semibold text-lg">Dificuldade</p>
+                    <p className="text-md">{selectedPrato.dificuldade}</p>
+                  </div>
+                </div>
+
+                <div style={{ marginBottom: "2rem" }}>
                   <h3
                     className="text-2xl font-semibold flex items-center"
                     style={{ marginBottom: "1rem" }}
                   >
-                    <ChefHat
-                      style={{ marginRight: "0.5rem" }}
-                    />
-                    Modo de Preparo
+                    <MapPin style={{ marginRight: "0.5rem" }} />
+                    Origem e História
                   </h3>
-                  <ol
-                    style={{
-                      marginBlockStart: "0.75rem",
-                      marginBlockEnd: "0.75rem",
-                    }}
+                  <p
+                    className="bg-white/10 backdrop-blur-md border-white border-1 rounded-lg text-center text-md font-semibold leading-relaxed flex justify-center"
+                    style={{ padding: "1rem" }}
                   >
-                    {selectedPrato.preparo.map((passo, index) => (
-                      <li
-                        key={index}
-                        className="bg-white/10 backdrop-blur-md border-white border-1 rounded-lg flex items-center"
-                        style={{ padding: "0.75rem", marginBottom: "0.5rem" }}
-                      >
-                        <span
-                          className="bg-transparent backdrop-blur-md border-white border-1 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold flex-shrink-0"
-                          style={{ marginRight: "0.75rem" }}
+                    {selectedPrato.origem}
+                  </p>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div>
+                    <h3
+                      className="text-2xl font-semibold flex items-center"
+                      style={{ marginBottom: "1rem" }}
+                    >
+                      <BookOpen style={{ marginRight: "0.5rem" }} />
+                      Ingredientes
+                    </h3>
+                    <ul
+                      style={{
+                        marginBlockStart: "0.5rem",
+                        marginBlockEnd: "0.5rem",
+                      }}
+                    >
+                      {selectedPrato.ingredientes.map((ingrediente, index) => (
+                        <li
+                          key={index}
+                          className="bg-white/10 backdrop-blur-md border-white border-1 rounded-lg flex items-center"
+                          style={{ padding: "1rem", marginBottom: "0.5rem" }}
                         >
-                          {index + 1}
-                        </span>
-                        <span>{passo}</span>
-                      </li>
-                    ))}
-                  </ol>
+                          <div style={{ marginRight: "0.75rem" }}>
+                            {ingrediente}
+                          </div>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <h3
+                      className="text-2xl font-semibold flex items-center"
+                      style={{ marginBottom: "1rem" }}
+                    >
+                      <ChefHat style={{ marginRight: "0.5rem" }} />
+                      Modo de Preparo
+                    </h3>
+                    <ol
+                      style={{
+                        marginBlockStart: "0.75rem",
+                        marginBlockEnd: "0.75rem",
+                      }}
+                    >
+                      {selectedPrato.preparo.map((passo, index) => (
+                        <li
+                          key={index}
+                          className="bg-white/10 backdrop-blur-md border-white border-1 rounded-lg flex items-center"
+                          style={{ padding: "0.75rem", marginBottom: "0.5rem" }}
+                        >
+                          <span
+                            className="bg-transparent backdrop-blur-md border-white border-1 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold flex-shrink-0"
+                            style={{ marginRight: "0.75rem" }}
+                          >
+                            {index + 1}
+                          </span>
+                          <span>{passo}</span>
+                        </li>
+                      ))}
+                    </ol>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
+      </main>
 
       <style jsx>{`
         @keyframes fadeIn {

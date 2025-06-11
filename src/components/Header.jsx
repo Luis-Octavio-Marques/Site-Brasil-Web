@@ -1,21 +1,18 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
 import { Link, useLocation } from "react-router-dom";
 
 function Header() {
-  const { t } = useTranslation();
   const location = useLocation();
 
-  // Pegando o primeiro segmento da URL como origem
   const currentSection = location.pathname.split("/")[1] || "default";
 
   const menuItems = [
-    { key: "history", link: "/history" },
-    { key: "culture", link: "/culture" },
-    { key: "gastronomy", link: "/gastronomy" },
-    { key: "nature", link: "/nature" },
-    { key: "language", link: "/language" },
-    { key: "flag", link: "/flag" },
+    { key: "history", title: "História", link: "/history" },
+    { key: "culture", title: "Cultura", link: "/culture" },
+    { key: "gastronomy", title: "Gastronomia", link: "/gastronomy" },
+    { key: "nature", title: "Natureza", link: "/nature" },
+    { key: "language", title: "Idioma", link: "/language" },
+    { key: "flag", title: "Bandeira", link: "/flag" },
   ];
 
   return (
@@ -28,7 +25,7 @@ function Header() {
     >
       <Link to="/" className="flex items-center gap-2 group">
         <h2 className="text-[26px] text-white font-light tracking-wider relative">
-          {t(`title.brazilWeb`)}
+          Brasil Web
           <div className="absolute -bottom-1 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
         </h2>
       </Link>
@@ -37,13 +34,13 @@ function Header() {
 
       <nav className="flex items-center">
         <ul className="flex gap-7 list-none">
-          {menuItems.map(({ key, link }) => (
+          {menuItems.map(({ key, link, title }) => (
             <li
               key={key}
               className="cursor-pointer font-light text-white/90 hover:text-white transition-colors duration-300"
             >
               <Link to={link} state={{ origin: currentSection }}>
-                {t(`menu.${key}`)}
+                {title}
               </Link>
             </li>
           ))}

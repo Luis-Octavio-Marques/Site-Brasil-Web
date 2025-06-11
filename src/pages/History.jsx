@@ -26,12 +26,8 @@ import historyImage23 from "../assets/img/country-history/historyImage23.png";
 
 import brazilBackgroundHistory from "./../assets/img/country-backgrounds/Brazil-background2.png";
 import Header from "../components/Header";
-import LanguageButton from "../components/LanguageButton";
-import { useTranslation } from "react-i18next";
 
 const TimelineItem = ({ item, index, isExpanded, onToggle }) => {
-  const { t } = useTranslation();
-
   const isLeft = index % 2 === 0;
 
   const getTruncatedText = (text, wordLimit = 25) => {
@@ -112,7 +108,7 @@ const TimelineItem = ({ item, index, isExpanded, onToggle }) => {
                         d="M5 15l7-7 7 7"
                       />
                     </svg>
-                    {t(`buttonSeeMore.seeLess`)}
+                    Mostrar Menos
                   </>
                 ) : (
                   <>
@@ -129,7 +125,7 @@ const TimelineItem = ({ item, index, isExpanded, onToggle }) => {
                         d="M19 9l-7 7-7-7"
                       />
                     </svg>
-                    {t(`buttonSeeMore.seeMore`)}
+                    Ler Mais
                   </>
                 )}
               </button>
@@ -159,7 +155,7 @@ const TimelineItem = ({ item, index, isExpanded, onToggle }) => {
           />
           <div style={{ padding: "16px" }}>
             <div className="text-sm text-white/90 font-medium">
-              {t(`history.visualRepresentation`)}
+              Representação Visual
             </div>
             <div
               className="text-white font-semibold"
@@ -175,8 +171,6 @@ const TimelineItem = ({ item, index, isExpanded, onToggle }) => {
 };
 
 export default function History() {
-  const { t } = useTranslation();
-
   const [expandedItems, setExpandedItems] = useState(new Set());
 
   const toggleExpanded = (index) => {
@@ -191,187 +185,210 @@ export default function History() {
 
   const timelineData = [
     {
+      id: "preCabral",
       year: "~ 12.000 a.C.",
-      period: t("history.preCabral.period"),
-      title: t("history.preCabral.title"),
-      description: t("history.preCabral.description"),
-      era: "pre-cabralino",
+      period: "Período Pré-Cabralino",
+      title: "Primeiros Habitantes",
+      description:
+        "Chegada dos primeiros grupos humanos ao território brasileiro pelo Estreito de Bering durante migrações paleolíticas. Esses povos desenvolveram culturas complexas e diversas ao longo de milênios, adaptando-se aos diferentes biomas brasileiros. Centenas de grupos étnicos distintos se formaram com línguas e organizações sociais variadas, indo de coletores nômades a sociedades sedentárias com agricultura avançada. Desenvolveram profundo conhecimento de medicina natural, astronomia e manejo sustentável de recursos. Deixaram registros arqueológicos como sambaquis litorâneos, pinturas rupestres na Serra da Capivara e sítios cerimoniais complexos por toda a América do Sul.",
       image: historyImage1,
     },
     {
+      id: "preColonial",
       year: "1500 - 1530",
-      period: t("history.preColonial.period"),
-      title: t("history.preColonial.title"),
-      description: t("history.preColonial.description"),
-      era: "pre-colonial",
+      period: "Período Pré-Colonial",
+      title: "Chegada dos Portugueses",
+      description:
+        "Pedro Álvares Cabral chega a Porto Seguro em 22 de abril de 1500, estabelecendo o primeiro contato oficial entre europeus e terras brasileiras. O período é marcado pela exploração inicial do território por expedições de reconhecimento costeiro. A principal atividade econômica era a extração do pau-brasil, árvore abundante na Mata Atlântica, cuja madeira vermelha era muito valorizada na Europa para tinturaria e marcenaria de luxo. O escambo com indígenas tornou-se a forma predominante de comércio, trocando ferramentas, espelhos e tecidos por mão de obra indígena no corte e transporte da madeira. Feitorias foram estabelecidas como estações comerciais temporárias. Nesse período, navegadores como Américo Vespúcio e Gonçalo Coelho realizaram expedições exploratórias que mapearam o litoral brasileiro.",
       image: historyImage2,
     },
     {
-      year: "1530 - 1822",
-      period: t("history.colonial.period"),
-      title: t("history.colonial.title"),
-      description: t("history.colonial.description"),
-      era: "colonial",
+      id: "colonial",
+      year: "1549",
+      period: "Período Colonial",
+      title: "Colonização Sistemática",
+      description:
+        "A colonização efetiva começa com a expedição de Martim Afonso de Sousa em 1530, enviada pelo rei Dom João III para fundar povoados permanentes. Implanta-se o sistema de capitanias hereditárias, dividindo o território em 15 faixas de terra concedidas à nobreza portuguesa. São Vicente, fundada em 1532, torna-se a primeira vila oficial do Brasil. A economia colonial estrutura-se inicialmente no cultivo da cana-de-açúcar no Nordeste, utilizando mão de obra escrava africana a partir de 1538. Os engenhos tornam-se complexos produtivos que dominaram a economia mundial do açúcar por séculos. A sociedade colonial desenvolve-se hierarquizada e miscigenada, com senhores de engenho no topo, camadas médias de comerciantes e artesãos, e uma grande massa de escravizados e dependentes na base.",
       image: historyImage3,
     },
     {
-      year: "1549",
-      period: t("history.colonial1.period"),
-      title: t("history.colonial1.title"),
-      description: t("history.colonial1.description"),
-      era: "colonial",
+      id: "colonial1",
+      year: "1695",
+      period: "Período Colonial",
+      title: "Governo-Geral",
+      description:
+        "Tomé de Sousa é nomeado o primeiro governador-geral do Brasil, centralizando a administração colonial que se mostrara ineficiente sob o sistema de capitanias hereditárias. Funda Salvador em 1549, que se torna a primeira capital do Brasil e permanece até 1763. O governo-geral representa uma mudança fundamental na política colonial portuguesa, estabelecendo administração mais direta e eficiente. Os primeiros jesuítas chegam com Tomé de Sousa, liderados pelo padre Manuel da Nóbrega, iniciando a catequese indígena e a construção das primeiras escolas. A Companhia de Jesus torna-se fundamental na educação colonial e (controversa) proteção dos nativos. Esse período estabelece a organização administrativa, judiciária e militar que perduraria por séculos.",
       image: historyImage4,
     },
     {
-      year: "1695",
-      period: t("history.colonial2.period"),
-      title: t("history.colonial2.title"),
-      description: t("history.colonial2.description"),
-      era: "colonial",
+      id: "colonial2",
+      year: "1789",
+      period: "Período Colonial",
+      title: "Descoberta do Ouro",
+      description:
+        "Bandeirantes paulistas, liderados por figuras como Borba Gato e Fernão Dias Paes, descobrem os primeiros veios de ouro em Minas Gerais, revolucionando completamente a economia colonial. A descoberta ocorre inicialmente em Ouro Preto (Vila Rica), expandindo-se depois para Mariana, Sabará e Diamantina. O evento marca o início do maior ciclo econômico da América colonial, atraindo milhares de portugueses e provocando a primeira grande migração interna do Brasil. A população de Minas Gerais cresce exponencialmente de praticamente zero para mais de 300 mil habitantes em poucas décadas. O eixo econômico desloca-se do Nordeste açucareiro para o Centro-Sul, consolidando a importância do Rio de Janeiro como porto exportador. A Coroa portuguesa implementa rígido controle fiscal por casas de fundição e o imposto do quinto (20% de toda produção de ouro).",
       image: historyImage5,
     },
     {
-      year: "1789",
-      period: t("history.colonial3.period"),
-      title: t("history.colonial3.title"),
-      description: t("history.colonial3.description"),
-      era: "colonial",
+      id: "colonial3",
+      year: "1808",
+      period: "Período Colonial",
+      title: "Inconfidência Mineira",
+      description:
+        "A Inconfidência Mineira representa o primeiro grande movimento organizado pela independência do Brasil, liderado por elite intelectual e econômica de Minas Gerais. O movimento surge em resposta ao aumento da pressão fiscal da Coroa portuguesa, especialmente a ameaça da derrama - cobrança forçada de impostos atrasados. Entre os conspiradores estão Joaquim José da Silva Xavier (Tiradentes), os poetas Tomás Antônio Gonzaga e Cláudio Manuel da Costa, além de fazendeiros e comerciantes influentes. O plano previa proclamar uma república inspirada nos Estados Unidos, com capital em São João del-Rei e universidade em Vila Rica. A conspiração é descoberta por delação, resultando em prisões. Tiradentes, sendo o único de origem humilde, torna-se bode expiatório e é executado em 21 de abril de 1792, tornando-se mártir da independência nacional.",
       image: historyImage6,
     },
     {
-      year: "1808",
-      period: t("history.colonial4.period"),
-      title: t("history.colonial4.title"),
-      description: t("history.colonial4.description"),
-      era: "colonial",
+      id: "colonial4",
+      year: "1822 - 1889",
+      period: "Período Colonial",
+      title: "Chegada da Família Real",
+      description:
+        "A chegada da família real portuguesa ao Brasil em março de 1808 marca uma transformação radical na história colonial. Dom João VI, acompanhado de cerca de 15 mil membros da corte, foge das invasões napoleônicas com apoio naval britânico. O Rio de Janeiro torna-se, pela primeira vez na história, sede de um império europeu fora da Europa. Reformas modernizadoras fundamentais são implementadas: abertura dos portos às nações amigas (principalmente Inglaterra), criação do Banco do Brasil, fundação da Imprensa Régia, instalação de fábricas e manufaturas e criação de escolas superiores (Academia Militar, Escola de Medicina). O Rio de Janeiro transforma-se urbanisticamente com teatros, bibliotecas e jardins. Em 1815, o Brasil é elevado à categoria de Reino Unido a Portugal e Algarves, deixando formalmente de ser colônia.",
       image: historyImage7,
     },
     {
-      year: "1822 - 1889",
-      period: t("history.imperial.period"),
-      title: t("history.imperial.title"),
-      description: t("history.imperial.description"),
-      era: "imperial",
+      id: "imperial",
+      year: "1831 - 1840",
+      period: "Período Imperial",
+      title: "Independência do Brasil",
+      description:
+        "A independência do Brasil consolida-se por um processo complexo iniciado com pressões das Cortes de Lisboa para recolonizar o Brasil após o retorno de Dom João VI a Portugal em 1821. Dom Pedro I, pressionado por decretos das cortes exigindo seu retorno e a subordinação do Brasil, protagoniza o episódio do Fico em janeiro de 1822, declarando que permaneceria no Brasil. José Bonifácio de Andrada e Silva torna-se figura central como Patriarca da Independência, articulando politicamente o processo. Em 7 de setembro de 1822, às margens do riacho Ipiranga, Dom Pedro proclama a independência com o grito 'Independência ou Morte!'. Consolidar a independência ainda exige combater resistências portuguesas em várias províncias, especialmente Bahia, Cisplatina e Pará. O Império do Brasil surge como monarquia constitucional, única nas Américas, enfrentando imediatamente tensões entre tendências centralizadoras e federalistas.",
       image: historyImage8,
     },
     {
-      year: "1831 - 1840",
-      period: t("history.imperial1.period"),
-      title: t("history.imperial1.title"),
-      description: t("history.imperial1.description"),
-      era: "imperial",
+      id: "imperial1",
+      year: "1840 - 1889",
+      period: "Período Imperial",
+      title: "Período Regencial",
+      description:
+        "A abdicação de Dom Pedro I em 7 de abril de 1831, pressionado por crises políticas e econômicas, inaugura um dos períodos mais turbulentos da história do Brasil. Com Pedro II com apenas 5 anos, uma regência assume enfrentando revoltas separatistas em todo o país. A Cabanagem no Pará (1835-1840) representa a revolta mais radical, com populações caboclas tomando o poder provincial. A Revolução Farroupilha no Rio Grande do Sul (1835-1845) estabelece uma república independente por dez anos. A Sabinada na Bahia (1837-1838) e a Balaiada no Maranhão (1838-1841) demonstram a fragilidade da unidade nacional. O período é marcado por intensos debates entre liberais e conservadores sobre centralização versus federalismo. O Ato Adicional de 1834 concede mais autonomia às províncias, mas não pacifica o país. O Golpe da Maioridade em 1840 antecipa a coroação de Pedro II tentando restaurar a estabilidade política.",
       image: historyImage9,
     },
     {
-      year: "1840 - 1889",
-      period: t("history.imperial2.period"),
-      title: t("history.imperial2.title"),
-      description: t("history.imperial2.description"),
-      era: "imperial",
+      id: "imperial2",
+      year: "1888",
+      period: "Período Imperial",
+      title: "Segundo Reinado",
+      description:
+        "O reinado de Dom Pedro II de 1840 a 1889 representa o período mais estável politicamente da história brasileira, consolidando a unidade territorial e promovendo significativa modernização. O imperador, com sólida formação intelectual e científica, transforma o Brasil em monarquia respeitada internacionalmente. O país vive renascimento cultural com a criação do Instituto Histórico e Geográfico Brasileiro, Academia Imperial de Belas Artes e o florescimento do romantismo literário. A economia diversifica-se com o café no Vale do Paraíba, tornando-se a principal fonte de divisas. A infraestrutura moderniza-se com ferrovias, telégrafo, iluminação a gás e sistemas iniciais de água/esgoto. Pedro II promove ciência e educação, correspondendo-se com intelectuais europeus e participando de exposições mundiais. Crescem gradualmente as tensões com a Guerra do Paraguai (1864-1870), questões abolicionistas e conflitos com a Igreja Católica e o Exército.",
       image: historyImage10,
     },
     {
-      year: "1888",
-      period: t("history.imperial3.period"),
-      title: t("history.imperial3.title"),
-      description: t("history.imperial3.description"),
-      era: "imperial",
+      id: "imperial3",
+      year: "1889 - 1930",
+      period: "Período Imperial",
+      title: "Abolição da Escravidão",
+      description:
+        "A Lei Áurea, assinada pela princesa Isabel em 13 de maio de 1888, representa o ato final de um longo processo abolicionista intensificado desde 1850 com o fim do tráfico negreiro. O movimento abolicionista ganha força com figuras como Luiz Gama, José do Patrocínio, André Rebouças e Joaquim Nabuco, mobilizando a opinião pública por jornais, conferências e sociedades emancipatórias. A Lei do Ventre Livre (1871) liberta filhos de escravas e a Lei dos Sexagenários (1885) liberta escravos com mais de 60 anos, criando abolição gradual. A resistência escrava intensifica-se com fugas em massa, formação de quilombos e setores urbanos aderindo à causa. A economia cafeeira, inicialmente resistente, adapta-se com imigração europeia em massa, especialmente italiana. O Brasil torna-se o último país das Américas a abolir a escravidão, encerrando quase 400 anos de trabalho forçado que trouxeram cerca de 4 milhões de africanos. Paradoxalmente, a abolição enfraquece a monarquia ao perder o apoio dos fazendeiros escravistas.",
       image: historyImage11,
     },
     {
-      year: "1889 - 1930",
-      period: t("history.oldRepublic.period"),
-      title: t("history.oldRepublic.title"),
-      description: t("history.oldRepublic.description"),
-      era: "republica-velha",
+      id: "oldRepublic",
+      year: "1894 - 1906",
+      period: "República Velha",
+      title: "Proclamação da República",
+      description:
+        "O marechal Deodoro da Fonseca proclama a República em 15 de novembro, derrubando a monarquia e estabelecendo um sistema republicano federalista dominado pelas oligarquias do café.",
       image: historyImage12,
     },
     {
-      year: "1894 - 1906",
-      period: t("history.oldRepublic1.period"),
-      title: t("history.oldRepublic1.title"),
-      description: t("history.oldRepublic1.description"),
-      era: "republica-velha",
+      id: "oldRepublic1",
+      year: "1930 - 1945",
+      period: "República Velha",
+      title: "República do Café com Leite",
+      description:
+        "Alternância de poder entre as oligarquias de São Paulo (café) e Minas Gerais (leite), caracterizando a política dos governadores e o coronelismo no interior.",
       image: historyImage13,
     },
     {
-      year: "1930 - 1945",
-      period: t("history.vargasEra.period"),
-      title: t("history.vargasEra.title"),
-      description: t("history.vargasEra.description"),
-      era: "era-vargas",
+      id: "vargasEra",
+      year: "1937 - 1945",
+      period: "Era Vargas",
+      title: "Revolução de 1930",
+      description:
+        "Getúlio Vargas chega ao poder por meio de um movimento revolucionário que derruba a Velha República, iniciando profundas transformações políticas, sociais e econômicas.",
       image: historyImage14,
     },
     {
-      year: "1937 - 1945",
-      period: t("history.vargasEra1.period"),
-      title: t("history.vargasEra1.title"),
-      description: t("history.vargasEra1.description"),
-      era: "era-vargas",
+      id: "vargasEra1",
+      year: "1946 - 1964",
+      period: "Era Vargas",
+      title: "Estado Novo",
+      description:
+        "Período ditatorial de Vargas caracterizado pela centralização do poder, nacionalismo econômico, modernização autoritária do Estado brasileiro e aproximação de regimes fascistas.",
       image: historyImage15,
     },
     {
-      year: "1946 - 1964",
-      period: t("history.populistRepublic.period"),
-      title: t("history.populistRepublic.title"),
-      description: t("history.populistRepublic.description"),
-      era: "republica-populista",
+      id: "populistRepublic",
+      year: "1956 - 1961",
+      period: "República Populista",
+      title: "Democracia Populista",
+      description:
+        "Período democrático marcado pelo populismo, industrialização acelerada, construção de Brasília por JK e crescente polarização política culminando no golpe militar.",
       image: historyImage16,
     },
     {
-      year: "1956 - 1961",
-      period: t("history.populistRepublic1.period"),
-      title: t("history.populistRepublic1.title"),
-      description: t("history.populistRepublic1.description"),
-      era: "republica-populista",
+      id: "populistRepublic1",
+      year: "1964 - 1985",
+      period: "República Populista",
+      title: "Governo JK e Brasília",
+      description:
+        "Juscelino Kubitschek implementa o Plano de Metas com o lema '50 anos em 5', promove a industrialização e inaugura Brasília como nova capital federal em 1960.",
       image: historyImage17,
     },
     {
+      id: "militaryDictatorship",
       year: "1964 - 1985",
-      period: t("history.militaryDictatorship.period"),
-      title: t("history.militaryDictatorship.title"),
-      description: t("history.militaryDictatorship.description"),
-      era: "ditadura-militar",
+      period: "Ditadura Militar",
+      title: "Golpe Militar",
+      description:
+        "As Forças Armadas depõem o presidente João Goulart em 31 de março, iniciando 21 anos de regime militar autoritário com censura, repressão política e violações de direitos humanos.",
       image: historyImage18,
     },
     {
+      id: "militaryDictatorship1",
       year: "1968",
-      period: t("history.militaryDictatorship1.period"),
-      title: t("history.militaryDictatorship1.title"),
-      description: t("history.militaryDictatorship1.description"),
-      era: "ditadura-militar",
+      period: "Ditadura Militar",
+      title: "AI-5 e Anos de Chumbo",
+      description:
+        "Edição do Ato Institucional nº 5, o mais duro da ditadura, fechando o Congresso e iniciando o período mais repressivo conhecido como Anos de Chumbo.",
       image: historyImage19,
     },
     {
+      id: "newRepublic",
       year: "1985 - presente",
-      period: t("history.newRepublic.period"),
-      title: t("history.newRepublic.title"),
-      description: t("history.newRepublic.description"),
-      era: "nova-republica",
+      period: "Nova República",
+      title: "Redemocratização",
+      description:
+        "Fim da ditadura militar com a eleição indireta de Tancredo Neves, iniciando a transição democrática e a abertura política que consolidou o regime democrático brasileiro.",
       image: historyImage20,
     },
     {
+      id: "newRepublic1",
       year: "1988",
-      period: t("history.newRepublic1.period"),
-      title: t("history.newRepublic1.title"),
-      description: t("history.newRepublic1.description"),
-      era: "nova-republica",
+      period: "Nova República",
+      title: "Constituição Cidadã",
+      description:
+        "Promulgação da nova Constituição Federal em 5 de outubro, consolidando a democracia e estabelecendo amplos direitos sociais, individuais e garantias fundamentais.",
       image: historyImage21,
     },
     {
+      id: "newRepublic2",
       year: "1994",
-      period: t("history.newRepublic2.period"),
-      title: t("history.newRepublic2.title"),
-      description: t("history.newRepublic2.description"),
-      era: "nova-republica",
+      period: "Nova República",
+      title: "Plano Real",
+      description:
+        "Implementação do Plano Real durante o governo Itamar Franco, controlando a hiperinflação que assolava o país e estabelecendo estabilidade monetária duradoura.",
       image: historyImage22,
     },
     {
+      id: "newRepublic3",
       year: "2002 - 2016",
-      period: t("history.newRepublic3.period"),
-      title: t("history.newRepublic3.title"),
-      description: t("history.newRepublic3.description"),
-      era: "nova-republica",
+      period: "Nova República",
+      title: "Era PT",
+      description:
+        "Luiz Inácio Lula da Silva assume a presidência, seguido por Dilma Rousseff, representando alternância democrática e implementando políticas de inclusão social e redistribuição de renda.",
       image: historyImage23,
     },
   ];
@@ -381,7 +398,7 @@ export default function History() {
       {/* Header */}
       <Header />
 
-      {/* Main */}
+      {/* Telç Inicial */}
       <div
         className={`relative flex flex-col items-center justify-center text-center text-white h-screen w-screen animate-fadeIn`}
         style={{
@@ -393,61 +410,79 @@ export default function History() {
       >
         <div className="absolute inset-0 bg-black/40 -z-10"></div>
         <h2 className="text-6xl font-bold border-b-4 border-white">
-          {t(`history.title`)}
+          História do Brasil
         </h2>
-
-        <LanguageButton />
       </div>
 
-      {/* Introdução */}
-      <section className="animate-fadeIn">
-        <div
-          className="bg-white/5 backdrop-blur-md border-white border-1 rounded-lg"
-          style={{
-            margin: "32px",
-            paddingLeft: "32px",
-            paddingRight: "32px",
-            paddingTop: "32px",
-            paddingBottom: "32px",
-          }}
-        >
-          <h2
-            className="text-4xl font-bold text-white text-center"
-            style={{ marginBottom: "16px" }}
+      {/* Main */}
+      <main
+        style={{
+          marginLeft: "24px",
+          marginRight: "24px",
+          paddingLeft: "6px",
+          paddingRight: "6px",
+          paddingTop: "12px",
+          paddingBottom: "12px",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+        }}
+      >
+        {/* Introdução */}
+        <section className="animate-fadeIn">
+          <div
+            className="bg-white/5 backdrop-blur-md border-white border-1 rounded-lg"
+            style={{
+              margin: "32px",
+              paddingLeft: "32px",
+              paddingRight: "32px",
+              paddingTop: "32px",
+              paddingBottom: "32px",
+            }}
           >
-            {t(`history.subtitle`)}
-          </h2>
-          <div className="grid" style={{ gap: "32px" }}>
-            <div
-              className="space-y-4 text-white/90 text-lg leading-relaxed"
-              style={{ gap: "16px" }}
+            <h2
+              className="text-4xl font-bold text-white text-center"
+              style={{ marginBottom: "16px" }}
             >
-              <p className="leading-relaxed text-center">
-                {t(`history.subdescription`)}
-              </p>
+              De onde viemos?
+            </h2>
+            <div className="grid" style={{ gap: "32px" }}>
+              <div
+                className="space-y-4 text-white/90 text-lg leading-relaxed"
+                style={{ gap: "16px" }}
+              >
+                <p className="leading-relaxed text-center">
+                  A história do Brasil é um retrato de lutas, encontros e
+                  transformações. Desde as raízes indígenas, passando pela
+                  chegada dos portugueses, até a mistura de povos e culturas que
+                  formaram nosso país. Uma trajetória marcada por conquistas,
+                  desafios e sonhos, que moldaram a identidade de um povo forte,
+                  criativo e cheio de diversidade.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Timeline */}
-      <div className="container relative" style={{ padding: "64px 64px" }}>
-        {/* Vertical line */}
-        <div className="absolute left-1/2 rounded-full transform -translate-x-1/2 w-1 bg-black h-[98%] opacity-30"></div>
+        {/* Timeline */}
+        <div className="container relative" style={{ padding: "64px 64px" }}>
+          {/* Vertical line */}
+          <div className="absolute left-1/2 rounded-full transform -translate-x-1/2 w-1 bg-black h-[98%] opacity-30"></div>
 
-        {/* Timeline items */}
-        <div className="relative">
-          {timelineData.map((item, index) => (
-            <TimelineItem
-              key={index}
-              item={item}
-              index={index}
-              isExpanded={expandedItems.has(index)}
-              onToggle={toggleExpanded}
-            />
-          ))}
+          {/* Timeline items */}
+          <div className="relative">
+            {timelineData.map((item, index) => (
+              <TimelineItem
+                key={index}
+                item={item}
+                index={index}
+                isExpanded={expandedItems.has(index)}
+                onToggle={toggleExpanded}
+              />
+            ))}
+          </div>
         </div>
-      </div>
+      </main>
 
       <style jsx>{`
         @keyframes fadeIn {

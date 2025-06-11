@@ -2,18 +2,14 @@ import React from "react";
 
 import brazilBackgroundFlag from "../assets/img/country-backgrounds/Brazil-background7.png";
 import Header from "../components/Header";
-import LanguageButton from "../components/LanguageButton";
-import { useTranslation } from "react-i18next";
 
 export default function Flag() {
-  const { t } = useTranslation();
-  
   return (
     <div>
       {/* Header */}
       <Header />
 
-      {/* Main */}
+      {/* Tela Inicial */}
       <div
         className={`relative flex flex-col items-center justify-center text-center text-white h-screen w-screen animate-fadeIn overflow-x-hidden`}
         style={{
@@ -25,11 +21,26 @@ export default function Flag() {
       >
         <div className="absolute inset-0 bg-black/40 -z-10"></div>
         <h2 className="text-6xl font-bold border-b-4 border-white">
-          {t(`flag.title`)}
+          Bandeira do Brasil
         </h2>
-
-        <LanguageButton />
       </div>
+
+      {/* Main */}
+      <main
+        style={{
+          marginLeft: "24px",
+          marginRight: "24px",
+          paddingLeft: "6px",
+          paddingRight: "6px",
+          paddingTop: "12px",
+          paddingBottom: "12px",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+        }}
+      >
+        
+      </main>
 
       <style jsx>{`
         @keyframes fadeIn {

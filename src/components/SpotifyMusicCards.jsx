@@ -1,6 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
 import { Play, Pause, Heart, MoreHorizontal } from "lucide-react";
-import { useTranslation } from "react-i18next";
 
 import song1 from "../assets/songs/Ela Une Todas As Coisas.mp3";
 import song2 from "../assets/songs/Fico Assim Sem Você.mp3";
@@ -13,7 +12,9 @@ import arybarrosoCover from "../assets/img/album-cover/AryBarroso-cover.png";
 import TomJobimViníciusMoraesCover from "../assets/img/album-cover/TomJobimViníciusMoraes-cover.png";
 
 const SpotifyMusicCards = () => {
-  const { t } = useTranslation();
+
+  const glassCard =
+    "bg-white/5 backdrop-blur-md border border-white rounded-lg";
 
   const [playingId, setPlayingId] = useState(null);
   const [progress, setProgress] = useState({});
@@ -117,14 +118,14 @@ const SpotifyMusicCards = () => {
 
   return (
     <div
-      className="bg-white/20 backdrop-blur-md border-white border-1 rounded-lg text-center"
+      className={`${glassCard} rounded-lg text-center`}
       style={{ marginTop: "3rem", padding: "2rem" }}
     >
       <h3
         className="text-3xl font-bold text-white"
         style={{ marginBottom: "1rem" }}
       >
-        {t(`culture.musicsubtitle1`)}
+        🎵 Artistas Icônicos
       </h3>
       <div
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
