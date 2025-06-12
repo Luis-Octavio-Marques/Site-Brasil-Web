@@ -903,7 +903,7 @@ export default function Nature() {
                     }`}
                   >
                     <IconComponent className="w-4 h-4 sm:w-5 sm:h-5 mr-1 sm:mr-2" />
-                    <span className="hidden xs:inline">{item.label}</span>
+                    <span>{item.label}</span>
                   </button>
                 );
               })}
