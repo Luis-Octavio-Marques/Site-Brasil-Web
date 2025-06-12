@@ -1,10 +1,9 @@
 import React from "react";
 
-import brazilBackgroundLanguage from "../assets/img/country-backgrounds/Brazil-background6.png";
 import Header from "../components/Header";
+import brazilBackgroundLanguage from "../assets/img/country-backgrounds/Brazil-background6.png"
 
 export default function Language() {
-
   const regions = [
     {
       name: "🏖️ Nordeste",
@@ -77,543 +76,311 @@ export default function Language() {
         desc: "samba, caçula, moleque, quitanda",
       },
     ],
-
-    lexicais1: [
-      {
-        title: "Vocabulário único",
-        desc: '"abacaxi" (vs. "ananás"), "trem" (vs. "comboio"), "banheiro" (vs. "casa de banho")',
-      },
-      {
-        title: "Influências indígenas",
-        desc: "capim, pipoca, tapioca, caipira",
-      },
-      {
-        title: "Influências africanas",
-        desc: "samba, caçula, moleque, quitanda",
-      },
-    ],
-
-    lexicais2: [
-      {
-        title: "Vocabulário único",
-        desc: '"abacaxi" (vs. "ananás"), "trem" (vs. "comboio"), "banheiro" (vs. "casa de banho")',
-      },
-      {
-        title: "Influências indígenas",
-        desc: "capim, pipoca, tapioca, caipira",
-      },
-      {
-        title: "Influências africanas",
-        desc: "samba, caçula, moleque, quitanda",
-      },
-    ],
   };
 
   return (
-    <div>
+    <div className="min-h-screen transition-all duration-1000 overflow-x-hidden">
       {/* Header */}
       <Header />
 
-      {/* Tela Incial */}
+      {/* Hero Section */}
       <div
-        className={`relative flex flex-col items-center justify-center text-center text-white h-screen w-screen animate-fadeIn overflow-x-hidden`}
-        style={{
-          backgroundImage: `url(${brazilBackgroundLanguage})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          zIndex: "0",
-        }}
+        className="relative flex flex-col items-center justify-center text-center text-white min-h-screen w-full animate-fadeIn bg-cover bg-center z-0"
+        style={{ backgroundImage: `url(${brazilBackgroundLanguage})` }}
       >
-        <div className="absolute inset-0 bg-black/40 -z-10"></div>
-        <h2 className="text-6xl font-bold border-b-4 border-white">
+        <div className="absolute inset-0 bg-black/40 -z-10" />
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold border-b-4 border-white px-4">
           Idioma do Brasil
         </h2>
       </div>
 
       {/* Main */}
-      <main
-        style={{
-          marginLeft: "24px",
-          marginRight: "24px",
-          paddingLeft: "6px",
-          paddingRight: "6px",
-          paddingTop: "12px",
-          paddingBottom: "12px",
-          color: "white",
-        }}
-      >
+      <main className="px-4 sm:px-6 lg:px-8 xl:px-12 py-6 sm:py-8 lg:py-12 flex flex-col justify-center text-white max-w-7xl mx-auto">
+        
         {/* Introdução */}
-        <section className="animate-fadeIn">
-          <div
-            className="bg-white/5 backdrop-blur-md border-white border-1 rounded-lg"
-            style={{
-              margin: "32px",
-              paddingLeft: "32px",
-              paddingRight: "32px",
-              paddingTop: "32px",
-              paddingBottom: "32px",
-            }}
-          >
-            <h2
-              className="text-4xl font-bold text-center"
-              style={{ marginBottom: "16px" }}
-            >
+        <section className="mb-8 sm:mb-12 lg:mb-16">
+          <div className="bg-white/10 backdrop-blur-md border border-white/30 rounded-xl p-6 sm:p-8 lg:p-10">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-center mb-4 sm:mb-6 lg:mb-8">
               Nas Palavras do Brasil
             </h2>
-            <div className="grid" style={{ gap: "32px" }}>
-              <div
-                className="space-y-4 text-lg leading-relaxed"
-                style={{ gap: "16px" }}
-              >
-                <p className="leading-relaxed text-center">
-                  A língua portuguesa falada no Brasil é um reflexo vivo da
-                  nossa diversidade cultural. Carregada de regionalismos, gírias
-                  e expressões únicas, ela mistura influências indígenas,
-                  africanas e europeias, criando um jeito de falar que é só
-                  nosso. Do "oxe" do Nordeste ao "bah" do Sul, cada canto do
-                  país carrega seu próprio sotaque e suas particularidades
-                  linguísticas, transmitidas de geração em geração como parte da
-                  nossa identidade.
-                </p>
-              </div>
+            <div className="space-y-4 sm:space-y-6 text-sm sm:text-base lg:text-lg xl:text-xl text-center leading-relaxed max-w-5xl mx-auto">
+              <p>
+                A língua portuguesa falada no Brasil é um reflexo vivo da
+                nossa diversidade cultural. Carregada de regionalismos, gírias
+                e expressões únicas, ela mistura influências indígenas,
+                africanas e europeias, criando um jeito de falar que é só
+                nosso. Do "oxe" do Nordeste ao "bah" do Sul, cada canto do
+                país carrega seu próprio sotaque e suas particularidades
+                linguísticas, transmitidas de geração em geração como parte da
+                nossa identidade.
+              </p>
             </div>
           </div>
         </section>
 
-        {/* Content Grid */}
-        <div
-          className="grid grid-cols-1 lg:grid-cols-2 gap-15 bg-white/5 backdrop-blur-md border-white border-1 rounded-lg"
-          style={{ marginBottom: "40px", padding: "30px" }}
-        >
+        {/* Content Grid - Visão Geral e História */}
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 bg-white/10 backdrop-blur-md border border-white/30 rounded-xl p-4 sm:p-6 lg:p-8 mb-8 sm:mb-12">
+          
           {/* Visão Geral */}
-          <div>
-            <h2
-              className="text-3xl font-bold border-b-2 border-white/80"
-              style={{ marginBottom: "20px", paddingBottom: "10px" }}
-            >
+          <div className="space-y-4 sm:space-y-6">
+            <h3 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold border-b-2 border-white/80 pb-2 sm:pb-3 mb-3 sm:mb-5">
               🌍 Visão Geral
-            </h2>
-            <p
-              className="text-lg text-justify"
-              style={{ marginBottom: "15px" }}
-            >
+            </h3>
+            <p className="text-sm sm:text-base lg:text-lg leading-relaxed mb-4 sm:mb-6">
               O português brasileiro é a variante da língua portuguesa falada no
               Brasil, sendo o idioma oficial do país desde a colonização. Com
               mais de 215 milhões de falantes nativos, o Brasil concentra a
               maior população lusófona do mundo.
             </p>
 
-            <div>
-              <div
-                className="bg-white/10 backdrop-blur-md border-white border-1 rounded-lg"
-                style={{
-                  padding: "20px",
-                  marginTop: "20px",
-                  marginBottom: "20px",
-                }}
-              >
-                <div className="flex flex-col">
-                  <p>
-                    {" "}
-                    <strong> Mais falado do mundo lusófono </strong>{" "}
-                  </p>
-                  <p>
-                    {" "}
-                    O português brasileiro representa cerca de 80% de todos os
-                    falantes de português no mundo!{" "}
-                  </p>
+            {/* Blocos informativos */}
+            <div className="space-y-3 sm:space-y-4">
+              {[
+                {
+                  title: "Mais falado do mundo lusófono",
+                  desc: "O português brasileiro representa cerca de 80% de todos os falantes de português no mundo!",
+                },
+                {
+                  title: "Uso do gerúndio",
+                  desc: 'O português brasileiro usa bastante o gerúndio em construções como "estou fazendo" ou "vou estar enviando".',
+                },
+                {
+                  title: "Sotaques diversos",
+                  desc: "O Brasil tem uma variedade enorme de sotaques, mudando bastante de uma região para outra.",
+                },
+              ].map((item, i) => (
+                <div
+                  key={i}
+                  className="bg-white/5 backdrop-blur-md border-1 border-white rounded-lg p-3 sm:p-4 lg:p-5 transition-colors duration-300"
+                >
+                  <p className="font-semibold text-sm sm:text-base lg:text-lg mb-1 sm:mb-2">{item.title}</p>
+                  <p className="text-xs sm:text-sm lg:text-base leading-relaxed">{item.desc}</p>
                 </div>
-              </div>
-              <div
-                className="bg-white/10 backdrop-blur-md border-white border-1 rounded-lg"
-                style={{
-                  padding: "20px",
-                  marginTop: "20px",
-                  marginBottom: "20px",
-                }}
-              >
-                <div className="flex flex-col">
-                  <p>
-                    {" "}
-                    <strong> Uso do gerúndio </strong>{" "}
-                  </p>
-                  <p>
-                    {" "}
-                    O português brasileiro usa bastante o gerúndio em
-                    construções como "estou fazendo" ou "vou estar enviando".{" "}
-                  </p>
-                </div>
-              </div>
-              <div
-                className="bg-white/10 backdrop-blur-md border-white border-1 rounded-lg"
-                style={{
-                  padding: "20px",
-                  marginTop: "20px",
-                  marginBottom: "20px",
-                }}
-              >
-                <div className="flex flex-col">
-                  <p>
-                    {" "}
-                    <strong> Sotaques diversos </strong>{" "}
-                  </p>
-                  <p>
-                    {" "}
-                    O Brasil tem uma variedade enorme de sotaques, mudando
-                    bastante de uma região para outra.{" "}
-                  </p>
-                </div>
-              </div>
+              ))}
             </div>
 
-            <div
-              className="grid grid-cols-2 gap-4"
-              style={{ marginTop: "20px", marginBottom: "20px" }}
-            >
-              <div
-                className="bg-white/5 backdrop-blur-md border-white border-1 rounded-lg text-center shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-default"
-                style={{ padding: "20px" }}
-              >
-                <span
-                  className="text-4xl font-bold block"
-                  style={{ marginBottom: "10px" }}
+            {/* Estatísticas */}
+            <div className="grid grid-cols-2 gap-3 sm:gap-4 mt-4 sm:mt-6">
+              {[
+                { value: "200M+", label: "Falantes Nativos" },
+                { value: "5", label: "Regiões Dialetais" },
+              ].map((stat, i) => (
+                <div
+                  key={i}
+                  className="bg-white/5 backdrop-blur-md border-1 border-white rounded-lg text-center shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 p-3 sm:p-4 lg:p-5"
                 >
-                  200M+
-                </span>
-                <span className="text-sm opacity-90"> Falantes Nativos </span>
-              </div>
-              <div
-                className="bg-white/5 backdrop-blur-md border-white border-1 rounded-lg text-center shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-default"
-                style={{ padding: "20px" }}
-              >
-                <span
-                  className="text-4xl font-bold block"
-                  style={{ marginBottom: "10px" }}
-                >
-                  5
-                </span>
-                <span className="text-sm opacity-90"> Regiões Dialetas </span>
-              </div>
+                  <span className="text-2xl sm:text-3xl lg:text-4xl font-bold block mb-1 sm:mb-2">
+                    {stat.value}
+                  </span>
+                  <span className="text-xs sm:text-sm lg:text-base opacity-90">{stat.label}</span>
+                </div>
+              ))}
             </div>
           </div>
 
-          {/* História */}
-          <div>
-            <h2
-              className="text-3xl font-bold border-b-2 border-white/80"
-              style={{ marginBottom: "20px", paddingBottom: "10px" }}
-            >
+          {/* História e Formação */}
+          <div className="space-y-4 sm:space-y-6">
+            <h3 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold border-b-2 border-white/80 pb-2 sm:pb-3 mb-3 sm:mb-5">
               📚 História e Formação
-            </h2>
-            <p
-              className="text-lg text-justify"
-              style={{ marginBottom: "15px" }}
-            >
+            </h3>
+            <p className="text-sm sm:text-base lg:text-lg leading-relaxed mb-4 sm:mb-6">
               A língua portuguesa chegou ao Brasil em 1500 com os colonizadores
               portugueses, mas sua evolução foi única, influenciada por línguas
               indígenas, africanas e de imigrantes.
             </p>
 
-            <div
-              className="relative"
-              style={{ marginBlock: "2rem", paddingLeft: "2.5rem" }}
-            >
+            <div className="relative pl-6 sm:pl-8 lg:pl-10">
               {/* Linha vertical */}
-              <div className="absolute left-4 top-0 bottom-0 w-1 bg-black opacity-30 rounded-full"></div>
+              <div className="absolute left-3 sm:left-4 top-0 bottom-0 w-0.5 sm:w-1 bg-white/30 rounded-full"></div>
 
               {/* Itens da linha do tempo */}
-              {timeline.map((item, index) => (
-                <div
-                  key={index}
-                  className="relative bg-white/10 backdrop-blur-lg border-1 border-white rounded-xl shadow-lg transition-transform duration-300 cursor-default"
-                  style={{ marginBottom: "2.5rem", padding: "1rem" }}
-                >
-                  {/* Marcador do evento */}
-                  <div className="absolute -left-[1.91rem] top-5 w-4 h-4 bg-black/80 border-4 border-white z-10 rounded-full shadow-md"></div>
-
-                  {/* Data e evento */}
+              <div className="space-y-4 sm:space-y-6 lg:space-y-8">
+                {timeline.map((item, index) => (
                   <div
-                    className="text-sm font-semibold"
-                    style={{ marginBottom: "0.25rem" }}
+                    key={index}
+                    className="bg-white/5 backdrop-blur-md border-1 border-white rounded-lg shadow-lg p-3 sm:p-4"
                   >
-                    {item.date}
+                    {/* Marcador */}
+                    <div className="absolute -left-[1.1rem] sm:-left-[1.8rem] lg:-left-[2.2rem] top-3 sm:top-4 lg:top-5 w-3 sm:w-4 h-3 sm:h-4 bg-blue-400 border-2 sm:border-4 border-white rounded-full shadow-md"></div>
+                    <div className="text-xs sm:text-sm lg:text-base font-semibold mb-1 sm:mb-2">{item.date}</div>
+                    <p className="text-xs sm:text-sm lg:text-base text-white/90 leading-relaxed">{item.event}</p>
                   </div>
-                  <p className="text-sm text-white">{item.event}</p>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>
 
         {/* Características Distintivas */}
-        <div className="col-span-full bg-white/5 backdrop-blur-md border-white border-1 rounded-lg" style={{ padding: "30px" }}>
-          <h2
-            className="text-3xl font-bold border-b-2 border-white/80"
-            style={{ marginBottom: "20px", paddingBottom: "10px" }}
-          >
+        <section className="mb-8 sm:mb-12 lg:mb-16">
+          <h3 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold border-b-2 border-white/80 pb-2 sm:pb-3 mb-4 sm:mb-6 lg:mb-8">
             🗣️ Características Distintivas
-          </h2>
-          <p className="text-lg text-justify" style={{ marginBottom: "15px" }}>
+          </h3>
+          <p className="text-sm sm:text-base lg:text-lg xl:text-xl leading-relaxed mb-6 sm:mb-8 lg:mb-10 max-w-5xl">
             O português brasileiro desenvolveu características únicas que o
             distinguem do português europeu e de outras variantes da língua.
           </p>
 
-          <h3
-            className="text-2xl font-semibold"
-            style={{ marginTop: "20px", marginBottom: "15px" }}
-          >
-            Principais Diferenças Fonéticas:
-          </h3>
-          <div
-            className="bg-white/5 backdrop-blur-md border-white border-1 rounded-lg"
-            style={{
-              padding: "20px",
-              marginTop: "20px",
-              marginBottom: "20px",
-            }}
-          >
-            {examples.foneticas.map((example, index) => (
-              <div
-                key={index}
-                className="bg-white/5 backdrop-blur-md border-white border-1 rounded-lg"
-                style={{
-                  marginTop: "10px",
-                  marginBottom: "10px",
-                  padding: "10px",
-                }}
-              >
-                <strong>{example.title}:</strong> {example.desc}
+          <div className="space-y-6 sm:space-y-8 lg:space-y-10">
+            {/* Diferenças Fonéticas */}
+            <div>
+              <h4 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-semibold mb-3 sm:mb-4 lg:mb-6">
+                Principais Diferenças Fonéticas:
+              </h4>
+              <div className="bg-white/5 backdrop-blur-md border-1 border-white rounded-xl p-4 sm:p-6 lg:p-8 space-y-3 sm:space-y-4">
+                {examples.foneticas.map((example, i) => (
+                  <div
+                    key={i}
+                    className="bg-white/5 backdrop-blur-md border-1 border-white rounded-lg p-3 sm:p-4 hover:bg-white/15 transition-colors duration-300"
+                  >
+                    <strong className="text-sm sm:text-base lg:text-lg">{example.title}:</strong>{" "}
+                    <span className="text-xs sm:text-sm lg:text-base">{example.desc}</span>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
+            </div>
 
-          <h3
-            className="text-2xl font-semibold"
-            style={{ marginTop: "20px", marginBottom: "15px" }}
-          >
-            Diferenças Lexicais:
-          </h3>
-          <div
-            className="bg-white/5 backdrop-blur-md border-white border-1 rounded-lg"
-            style={{
-              padding: "20px",
-              marginTop: "20px",
-              marginBottom: "20px",
-            }}
-          >
-            {examples.lexicais.map((example, index) => (
-              <div
-                key={index}
-                className="bg-white/5 backdrop-blur-md border-white border-1 rounded-lg"
-                style={{
-                  marginTop: "10px",
-                  marginBottom: "10px",
-                  padding: "10px",
-                }}
-              >
-                <strong>{example.title}:</strong> {example.desc}
+            {/* Diferenças Lexicais */}
+            <div>
+              <h4 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-semibold mb-3 sm:mb-4 lg:mb-6">
+                Diferenças Lexicais:
+              </h4>
+              <div className="bg-white/5 backdrop-blur-md border-1 border-white rounded-xl p-4 sm:p-6 lg:p-8 space-y-3 sm:space-y-4">
+                {examples.lexicais.map((example, i) => (
+                  <div
+                    key={i}
+                    className="bg-white/5 backdrop-blur-md border-1 border-white rounded-lg p-3 sm:p-4"
+                  >
+                    <strong className="text-sm sm:text-base lg:text-lg">{example.title}:</strong>{" "}
+                    <span className="text-xs sm:text-sm lg:text-base text-white/90">{example.desc}</span>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
-        </div>
+        </section>
 
-        {/* Nova Grid */}
-        <div
-          className="grid grid-cols-1 lg:grid-cols-2 gap-8"
-          style={{ marginBlock: "30px" }}
-        >
+        {/* Segunda Grid - Variações Regionais e Educação */}
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 mb-8 sm:mb-12">
+          
           {/* Variações Regionais */}
-          <div className="bg-white/5 backdrop-blur-md border-white border-1 rounded-lg" style={{ padding: "30px" }}>
-            <h2
-              className="text-3xl font-bold border-b-2 border-white/80"
-              style={{ marginBottom: "20px", paddingBottom: "10px" }}
-            >
+          <section className="bg-white/10 backdrop-blur-md border border-white/30 rounded-xl p-4 sm:p-6 lg:p-8">
+            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold border-b-2 border-white/80 pb-2 sm:pb-3 mb-4 sm:mb-6">
               🌎 Variações Regionais
-            </h2>
-            <p
-              className="text-lg text-justify"
-              style={{ marginBottom: "15px" }}
-            >
+            </h3>
+            <p className="text-sm sm:text-base lg:text-lg leading-relaxed mb-4 sm:mb-6 lg:mb-8">
               O Brasil possui uma rica diversidade dialetal, com variações
               significativas entre as diferentes regiões.
             </p>
 
-            <div
-              className="grid grid-cols-1 gap-4"
-              style={{ marginTop: "20px", marginBottom: "20px" }}
-            >
-              {regions.map((region, index) => (
+            <div className="grid grid-cols-1 gap-3 sm:gap-4">
+              {regions.map((region, i) => (
                 <div
-                  key={index}
-                  className="bg-white/5 backdrop-blur-md border-white border-1 rounded-lg text-center shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer"
-                  style={{ padding: "15px" }}
+                  key={i}
+                  className="bg-white/5 backdrop-blur-md border-1 border-white rounded-lg text-center shadow-md hover:scale-[1.01] hover:bg-white/15 transition-all duration-300 p-3 sm:p-4"
                 >
-                  <h3
-                    className="text-lg font-semibold"
-                    style={{ marginBottom: "8px" }}
-                  >
-                    {region.name}
-                  </h3>
-                  <p className="text-md">{region.description}</p>
+                  <h4 className="text-sm sm:text-base lg:text-lg font-semibold mb-1 sm:mb-2">{region.name}</h4>
+                  <p className="text-xs sm:text-sm lg:text-base text-white/90 leading-relaxed">{region.description}</p>
                 </div>
               ))}
             </div>
-          </div>
+          </section>
 
           {/* Educação e Norma Culta */}
-          <div className="bg-white/5 backdrop-blur-md border-white border-1 rounded-lg" style={{ padding: "30px" }}>
-            <h2
-              className="text-3xl font-bold border-b-2 border-white/80"
-              style={{ marginBottom: "20px", paddingBottom: "10px" }}
-            >
+          <section className="bg-white/10 backdrop-blur-md border border-white/30 rounded-xl p-4 sm:p-6 lg:p-8">
+            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold border-b-2 border-white/80 pb-2 sm:pb-3 mb-4 sm:mb-6">
               🎓 Educação e Norma Culta
-            </h2>
-            <p
-              className="text-lg text-justify"
-              style={{ marginBottom: "15px" }}
-            >
+            </h3>
+            <p className="text-sm sm:text-base lg:text-lg leading-relaxed mb-4 sm:mb-6">
               O ensino do português no Brasil segue a norma culta brasileira,
               estabelecida por gramáticos e instituições como a Academia
               Brasileira de Letras.
             </p>
 
-            <h3
-              className="text-xl font-semibold"
-              style={{ marginBottom: "15px" }}
-            >
+            <h4 className="text-base sm:text-lg lg:text-xl font-semibold mb-3 sm:mb-4 lg:mb-5">
               Características da Norma Culta Brasileira:
-            </h3>
+            </h4>
 
-            <div
-              className="bg-white/5 backdrop-blur-md border-white border-1 rounded-lg"
-              style={{
-                padding: "20px",
-                marginTop: "20px",
-                marginBottom: "20px",
-              }}
-            >
-              <div className="space-y-2">
-                <p>• Uso de "você" como pronome de tratamento padrão</p>
-                <p>• Colocação pronominal mais flexível</p>
-                <p>• Uso do gerúndio ("está fazendo" vs. "está a fazer")</p>
-                <p>• Simplificação de certas estruturas sintáticas</p>
-              </div>
+            <div className="space-y-3 sm:space-y-4 lg:space-y-6">
+              {[
+                [
+                  "• Uso de 'você' como pronome de tratamento padrão",
+                  "• Colocação pronominal mais flexível",
+                  "• Uso do gerúndio ('está fazendo' vs. 'está a fazer')",
+                  "• Simplificação de certas estruturas sintáticas"
+                ],
+                [
+                  "• O verbo concorda em número e pessoa com o sujeito",
+                  "• Adjetivos, artigos e pronomes concordam com o substantivo",
+                  "• Verbos e nomes exigem as preposições corretas",
+                  "• Utiliza vocabulário neutro e mais universal"
+                ],
+                [
+                  "• Preferência por próclise e ênfase à norma formal",
+                  "• Palavras mais específicas e formais são priorizadas",
+                  "• Períodos mais longos com uso de subordinadas",
+                  "• Evita formas contraídas ou populares"
+                ]
+              ].map((group, groupIndex) => (
+                <div key={groupIndex} className="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg p-3 sm:p-4 lg:p-5 space-y-1 sm:space-y-2">
+                  {group.map((item, itemIndex) => (
+                    <p key={itemIndex} className="text-xs sm:text-sm lg:text-base text-white/90">{item}</p>
+                  ))}
+                </div>
+              ))}
             </div>
-            <div
-              className="bg-white/5 backdrop-blur-md border-white border-1 rounded-lg"
-              style={{
-                padding: "20px",
-                marginTop: "20px",
-                marginBottom: "20px",
-              }}
-            >
-              <div className="space-y-2">
-                <p>• O verbo concorda em número e pessoa com o sujeito </p>
-                <p>
-                  • Adjetivos, artigos e pronomes concordam com o substantivo{" "}
-                </p>
-                <p>• Verbos e nomes exigem as preposições corretas </p>
-                <p>• Utiliza vocabulário neutro e mais universal </p>
-              </div>
-            </div>
-            <div
-              className="bg-white/5 backdrop-blur-md border-white border-1 rounded-lg"
-              style={{
-                padding: "20px",
-                marginTop: "20px",
-                marginBottom: "20px",
-              }}
-            >
-              <div className="space-y-2">
-                <p>• Preferência por próclise e ênfase à norma formal </p>
-                <p>• Palavras mais específicas e formais são priorizadas </p>
-                <p>• Períodos mais longos com uso de subordinadas </p>
-                <p>• Evita formas contraídas ou populares </p>
-              </div>
-            </div>
-          </div>
+          </section>
         </div>
 
         {/* Importância Cultural */}
-        <div className="col-span-full bg-white/5 backdrop-blur-md border-white border-1 rounded-lg" style={{ padding: "30px" }}>
-          <h2
-            className="text-3xl font-bold border-b-2 border-white/80"
-            style={{ marginBottom: "20px", paddingBottom: "10px" }}
-          >
+        <section className="bg-white/10 backdrop-blur-md border border-white/30 rounded-xl p-4 sm:p-6 lg:p-8 xl:p-10">
+          <h3 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold border-b-2 border-white/80 pb-2 sm:pb-3 mb-4 sm:mb-6 lg:mb-8">
             🌟 Importância Cultural e Global
-          </h2>
-          <p className="text-lg text-justify" style={{ marginBottom: "15px" }}>
+          </h3>
+          <p className="text-sm sm:text-base lg:text-lg xl:text-xl leading-relaxed mb-4 sm:mb-6 lg:mb-8 max-w-5xl">
             O português brasileiro transcende fronteiras, sendo fundamental para
             a cultura lusófona mundial e tendo crescente importância no cenário
             internacional.
           </p>
 
-          <h3
-            className="text-2xl font-semibold"
-            style={{ margin: "20px 0 15px 0" }}
-          >
-            Influência Cultural:
-          </h3>
-          <p className="text-lg text-justify" style={{ marginBottom: "15px" }}>
-            A literatura brasileira, música, cinema e televisão exportam o
-            português brasileiro para o mundo, tornando-o uma das variantes mais
-            conhecidas da língua portuguesa globalmente.
-          </p>
-
-          <h3
-            className="text-2xl font-semibold"
-            style={{ margin: "20px 0 15px 0" }}
-          >
-            Presença Digital:
-          </h3>
-          <p className="text-lg text-justify" style={{ marginBottom: "15px" }}>
-            O português brasileiro domina o espaço digital lusófono, sendo
-            amplamente usado em redes sociais, sites e aplicativos,
-            influenciando até mesmo falantes de outras variantes do português.
-          </p>
-
-          <div
-            className="grid grid-cols-1 md:grid-cols-3 gap-4"
-            style={{ margin: "20px 0" }}
-          >
-            <div
-              className="bg-white/5 backdrop-blur-md border-white border-1 rounded-lg text-center shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
-              style={{ padding: "20px" }}
-            >
-              <span
-                className="text-4xl font-bold block"
-                style={{ marginBottom: "10px" }}
-              >
-                8°
-              </span>
-              <p> Idioma mais falado </p>
+          <div className="space-y-6 sm:space-y-8 lg:space-y-10 mb-6 sm:mb-8 lg:mb-10">
+            <div>
+              <h4 className="text-lg sm:text-xl lg:text-2xl font-semibold mb-3 sm:mb-4">Influência Cultural:</h4>
+              <p className="text-sm sm:text-base lg:text-lg leading-relaxed">
+                A literatura brasileira, música, cinema e televisão exportam o
+                português brasileiro para o mundo, tornando-o uma das variantes mais
+                conhecidas da língua portuguesa globalmente.
+              </p>
             </div>
-            <div
-              className="bg-white/5 backdrop-blur-md border-white border-1 rounded-lg text-center shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
-              style={{ padding: "20px" }}
-            >
-              <span
-                className="text-4xl font-bold block"
-                style={{ marginBottom: "10px" }}
-              >
-                9
-              </span>
-              <p> Países onde é oficial </p>
-            </div>
-            <div
-              className="bg-white/5 backdrop-blur-md border-white border-1 rounded-lg text-center shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
-              style={{ padding: "20px" }}
-            >
-              <span
-                className="text-4xl font-bold block"
-                style={{ marginBottom: "10px" }}
-              >
-                260M+
-              </span>
-              <p> Falantes Globais </p>
+
+            <div>
+              <h4 className="text-lg sm:text-xl lg:text-2xl font-semibold mb-3 sm:mb-4">Presença Digital:</h4>
+              <p className="text-sm sm:text-base lg:text-lg leading-relaxed">
+                O português brasileiro domina o espaço digital lusófono, sendo
+                amplamente usado em redes sociais, sites e aplicativos,
+                influenciando até mesmo falantes de outras variantes do português.
+              </p>
             </div>
           </div>
-        </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+            {[
+              { value: "8°", label: "Idioma mais falado", color: "text-yellow-400" },
+              { value: "9", label: "Países onde é oficial", color: "text-green-400" },
+              { value: "260M+", label: "Falantes Globais", color: "text-blue-400" },
+            ].map(({ value, label }, i) => (
+              <div
+                key={i}
+                className="bg-white/5 backdrop-blur-md border-1 border-white rounded-xl text-center shadow-lg hover:scale-102 transition-all duration-300 p-4 sm:p-5 lg:p-6"
+              >
+                <span className="text-3xl sm:text-4xl lg:text-5xl font-bold block mb-2 sm:mb-3">
+                  {value}
+                </span>
+                <p className="text-xs sm:text-sm lg:text-base text-white">{label}</p>
+              </div>
+            ))}
+          </div>
+        </section>
       </main>
 
       <style jsx>{`
