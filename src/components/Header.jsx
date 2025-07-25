@@ -219,24 +219,6 @@ function Header() {
         .animate-fadeIn {
           animation: fadeIn 0.8s ease-out forwards;
         }
-        
-        /* Smooth scrollbar */
-        ::-webkit-scrollbar {
-          width: 6px;
-        }
-        
-        ::-webkit-scrollbar-track {
-          background: transparent;
-        }
-        
-        ::-webkit-scrollbar-thumb {
-          background: rgba(255, 255, 255, 0.2);
-          border-radius: 3px;
-        }
-        
-        ::-webkit-scrollbar-thumb:hover {
-          background: rgba(255, 255, 255, 0.3);
-        }
       `}</style>
     </>
   );

@@ -8,7 +8,6 @@ export default function Gastronomy() {
   const [selectedPrato, setSelectedPrato] = useState(null);
   const [activeRegiao, setActiveRegiao] = useState("todos");
 
-  // Ordem desejada: Nacional - Nordeste - Norte - Centro-Oeste - Sul - Sudeste
   const ordemRegioes = [
     "Nacional",
     "Nordeste",
@@ -1120,7 +1119,6 @@ export default function Gastronomy() {
       ? pratos
       : pratos.filter((prato) => prato.regiao === activeRegiao);
 
-  // Função para bloquear/desbloquear o scroll do body ao abrir/fechar o modal
   React.useEffect(() => {
     if (selectedPrato) {
       const originalOverflow = document.body.style.overflow;
@@ -1135,7 +1133,7 @@ export default function Gastronomy() {
     <div className="min-h-screen transition-all duration-1000 overflow-x-hidden">
       <Header />
 
-      {/* Hero Section - Melhorado para mobile */}
+      {/* Hero Section */}
       <div
         className="relative flex flex-col items-center justify-center text-center text-white min-h-screen w-full animate-fadeIn bg-cover bg-center z-0"
         style={{ backgroundImage: `url(${brazilBackgroundGastronomy})` }}
@@ -1146,9 +1144,9 @@ export default function Gastronomy() {
         </h2>
       </div>
 
-      {/* Main - Padding otimizado para mobile */}
+      {/* Main */}
       <main className="px-4 sm:px-6 lg:px-8 py-4">
-        {/* Introdução - Melhorada para mobile */}
+        {/* Introdução */}
         <section className="animate-fadeIn">
           <div className="bg-white/5 backdrop-blur-md border-1 border-white rounded-lg mx-2 sm:mx-4 lg:mx-8 p-4 sm:p-6 lg:p-8">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white text-center mb-4">
@@ -1164,7 +1162,6 @@ export default function Gastronomy() {
               </p>
             </div>
 
-            {/* Grid responsivo melhorado */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mt-6 sm:mt-8">
               <div className="bg-white/10 backdrop-blur-md border border-white rounded-lg p-4 sm:p-6 lg:p-8 text-center text-white">
                 <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold mb-2 flex items-center justify-center gap-2">
@@ -1196,7 +1193,6 @@ export default function Gastronomy() {
           </div>
         </section>
 
-        {/* Filtros por Região - Otimizados para mobile */}
         <section className="container mx-auto px-2 sm:px-6 py-6 sm:py-8">
           <div className="flex flex-wrap justify-center gap-2 sm:gap-3 lg:gap-4 mb-6 sm:mb-8">
             {regioes.map((regiao) => {
@@ -1220,7 +1216,6 @@ export default function Gastronomy() {
           </div>
         </section>
 
-        {/* Grid de Pratos - Totalmente responsivo */}
         <section className="container mx-auto px-2 sm:px-6 pb-12 sm:pb-16">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {pratosFiltrados.map((prato) => (
@@ -1282,7 +1277,6 @@ export default function Gastronomy() {
           </div>
         </section>
 
-        {/* Modal de Receita - Otimizado para mobile */}
         {selectedPrato && (
           <div className="fixed inset-0 bg-black/95 flex items-center justify-center z-50 p-4">
             <div className="bg-gradient-to-br from-green-400 via-blue-500 to-yellow-400 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto text-white">
@@ -1359,7 +1353,7 @@ export default function Gastronomy() {
                     {selectedPrato.preparo.map(
                       (
                         step,
-                        idx // Corrigido de modoPreparo para preparo
+                        idx
                       ) => (
                         <li
                           key={idx}

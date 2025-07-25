@@ -478,7 +478,7 @@ export default function History() {
       <main className="px-4 sm:px-6 lg:px-8 py-8 flex flex-col justify-center">
         {/* Introduction Section */}
         <section className="animate-fadeIn">
-          <div className="bg-white/5 backdrop-blur-md border border-white rounded-lg mx-auto max-w-4xl p-6 lg:p-8 mb-8">
+          <div className="bg-white/5 backdrop-blur-md border border-white rounded-lg mx-auto max-w-5xl p-6 lg:p-8 mb-8">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white text-center mb-4">
               De onde viemos?
             </h2>

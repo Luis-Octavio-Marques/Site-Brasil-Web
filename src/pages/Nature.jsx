@@ -69,7 +69,7 @@ export default function Nature() {
         });
         return newIndex;
       });
-    }, 2500); // Muda a cada 2.5 segundos
+    }, 2000); // Muda a cada 2.5 segundos
 
     return () => clearInterval(interval);
   });

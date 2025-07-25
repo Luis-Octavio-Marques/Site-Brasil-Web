@@ -168,7 +168,7 @@ export default function Culture() {
       {/* Header */}
       <Header />
 
-      {/* Tela Inicial */}
+      {/* Hero Section */}
       <div
         className="relative flex flex-col items-center justify-center text-center text-white h-screen w-screen animate-fadeIn"
         style={{
@@ -228,7 +228,7 @@ export default function Culture() {
       </div>
 
       {/* Navigation - Desktop */}
-      <nav className="hidden md:block sticky top-0 bg-white/10 backdrop-blur-md border-b border-white/20 z-50">
+      <nav className="hidden md:block sticky top-0 bg-white/10 backdrop-blur-md border-b border-white/20 z-50 animate-fadeIn">
         <div className="container mx-auto px-6 py-4">
           <div className="flex flex-wrap justify-center gap-2 md:gap-4 lg:gap-6">
             {sections.map((section) => {
@@ -747,7 +747,7 @@ export default function Culture() {
               </div>
 
               {/* Hino Letra */}
-              <div className="relative z-10 mx-auto py-3 md:py-6">
+              <div className="rounded-xl bg-white/5 backdrop-blur-md border-1 border-white relative z-10 mx-auto py-3 px-6 md:py-6">
                 <div className="rounded-xl bg-white/5 backdrop-blur-md border-1 border-white text-center shadow-2xl relative mb-3 md:mb-4 p-4 md:p-8">
                   <h1 className="text-3xl md:text-5xl font-bold tracking-tight mb-2 md:mb-4">
                     Hino Nacional Brasileiro
@@ -758,126 +758,117 @@ export default function Culture() {
                   </p>
                 </div>
 
-                {/* Main content */}
-                <div>
-                  {/* First verse section */}
-                  <div className="rounded-xl bg-white/5 backdrop-blur-md border-1 border-white shadow-2xl mb-4 md:mb-6 p-4 md:p-8">
-                    <div className="space-y-3 md:space-y-6 text-base md:text-xl leading-relaxed pl-2 md:pl-4">
-                      <div>
-                        Ouviram do Ipiranga as margens plácidas
-                        <br />
-                        De um povo heroico o brado retumbante,
-                        <br />
-                        E o sol da liberdade, em raios fúlgidos,
-                        <br />
-                        Brilhou no céu da pátria nesse instante.
-                      </div>
+                <div className="block text-xl gap-10 mx-5 md:flex md:justify-between md:my-8">
+                  <div className="flex flex-col gap-6">
+                    <div>
+                      Ouviram do Ipiranga as margens plácidas
+                      <br />
+                      De um povo heroico o brado retumbante,
+                      <br />
+                      E o sol da Liberdade, em raios fúlgidos,
+                      <br />
+                      Brilhou no céu da Pátria nesse instante.
                     </div>
-                  </div>
 
-                  {/* First chorus */}
-                  <div className="rounded-xl bg-white/5 backdrop-blur-md border-1 border-white shadow-2xl text-center mb-4 md:mb-6 p-4 md:p-8">
-                    <div className="text-xl md:text-2xl font-bold leading-relaxed">
+                    <div>
+                      Se o penhor dessa igualdade
+                      <br />
+                      Conseguimos conquistar com braço forte,
+                      <br />
+                      Em teu seio, ó Liberdade,
+                      <br />
+                      Desafia o nosso peito a própria morte!
+                    </div>
+
+                    <div className="font-bold">
                       Ó Pátria amada,
                       <br />
                       Idolatrada,
                       <br />
                       Salve! Salve!
                     </div>
-                  </div>
 
-                  {/* Second verse section */}
-                  <div className="rounded-xl bg-white/5 backdrop-blur-md border-1 border-white shadow-2xl mb-4 md:mb-6 p-4 md:p-8">
-                    <div className="space-y-3 md:space-y-6 text-base md:text-xl leading-relaxed">
-                      <div>
-                        Brasil, um sonho intenso, um raio vívido
-                        <br />
-                        De amor e de esperança à terra desce,
-                        <br />
-                        Se em teu formoso céu, risonho e límpido,
-                        <br />A imagem do Cruzeiro resplandece.
-                      </div>
+                    <div>
+                      Brasil, um sonho intenso, um raio vívido
+                      <br />
+                      De amor e de esperança à terra desce,
+                      <br />
+                      Se em teu formoso céu, risonho e límpido,
+                      <br />
+                      A imagem do Cruzeiro resplandece.
                     </div>
-                  </div>
 
-                  {/* Second chorus */}
-                  <div className="rounded-xl bg-white/5 backdrop-blur-md border-1 border-white shadow-2xl text-center mb-4 md:mb-6 p-4 md:p-8">
-                    <div className="text-xl md:text-2xl font-bold leading-relaxed">
+                    <div>
+                      Gigante pela própria natureza,
+                      <br />
+                      És belo, és forte, impávido colosso,
+                      <br />
+                      E o seu futuro extreme essa grandeza.
+                    </div>
+
+                    <div className="font-bold">
                       Terra adorada, Entre outras mil,
                       <br />
-                      És tu, Brasil, Ó Pátria amada! <br />
+                      És tu, Brasil, Ó Pátria amada!
+                      <br />
                       Dos filhos deste solo és mãe gentil,
                       <br />
                       Pátria amada, Brasil!
                     </div>
                   </div>
 
-                  {/* Third verse section */}
-                  <div className="rounded-xl bg-white/5 backdrop-blur-md border-1 border-white shadow-2xl mb-4 md:mb-6 p-4 md:p-8">
-                    <div className="space-y-3 md:space-y-6 text-base md:text-xl leading-relaxed">
-                      <div>
-                        Deitado eternamente em berço esplêndido,
-                        <br />
-                        Ao som do mar e à luz do céu profundo,
-                      </div>
-
-                      <div>
-                        Fulguras, ó Brasil, florão da América,
-                        <br />
-                        Iluminado ao sol do Novo Mundo!
-                      </div>
-
-                      <div>
-                        Do que a terra mais garrida
-                        <br />
-                        Teus risonhos, lindos campos têm mais flores;
-                        <br />
-                        "Nossos bosques têm mais vida",
-                        <br />
-                        "Nossa vida" no teu seio "mais amores".
-                      </div>
+                  <div className="flex flex-col gap-6">
+                    <div>
+                      Deitado eternamente em berço esplêndido,
+                      <br />
+                      Ao som do mar e à luz do céu profundo,
+                      <br /> 
+                      Fulguras, ó Brasil, florão da América,
+                      <br />
+                      Iluminado ao sol do Novo Mundo!
                     </div>
-                  </div>
 
-                  {/* Third chorus */}
-                  <div className="rounded-xl bg-white/5 backdrop-blur-md border-1 border-white shadow-2xl text-center mb-4 md:mb-6 p-4 md:p-8">
-                    <div className="text-xl md:text-2xl font-bold leading-relaxed">
+                    <div>
+                      Do que a terra mais garrida
+                      <br />
+                      Teus risonhos, lindos campos têm mais flores;
+                      <br />
+                      "Nossos bosques têm mais vida",
+                      <br />
+                      "Nossa vida" no teu seio "mais amores".
+                    </div>
+
+                    <div className="font-bold">
                       Ó Pátria amada,
                       <br />
                       Idolatrada,
                       <br />
                       Salve! Salve!
                     </div>
-                  </div>
 
-                  {/* Fourth verse section */}
-                  <div className="rounded-xl bg-white/5 backdrop-blur-md border-1 border-white shadow-2xl mb-4 md:mb-6 p-4 md:p-8">
-                    <div className="space-y-3 md:space-y-6 text-base md:text-xl leading-relaxed">
-                      <div>
-                        Brasil, de amor eterno seja símbolo
-                        <br />
-                        O lábaro que ostentas estrelado,
-                        <br />
-                        E diga o verde-louro desta flâmula
-                        <br />– "Paz no futuro e glória no passado."
-                      </div>
-
-                      <div>
-                        Mas, se ergues da justiça a clava forte,
-                        <br />
-                        Verás que um filho teu não foge à luta,
-                        <br />
-                        Nem teme, quem te adora, a própria morte.
-                      </div>
+                    <div>
+                      Brasil, de amor eterno seja símbolo
+                      <br />
+                      O lábaro que ostentas estrelado,
+                      <br />
+                      E diga o verde-louro desta flâmula
+                      <br />
+                      – "Paz no futuro e glória no passado."
                     </div>
-                  </div>
 
-                  {/* Final chorus */}
-                  <div className="rounded-xl bg-white/5 backdrop-blur-md border-1 border-white shadow-2xl text-center mb-4 md:mb-6 p-4 md:p-8">
-                    <div className="text-xl md:text-2xl font-bold leading-relaxed">
+                    <div>
+                      Mas, se ergues da justiça a clava forte,
+                      <br />
+                      Verás que um filho teu não foge à luta,
+                      <br />
+                      Nem teme, quem te adora, a própria morte.
+                    </div>
+
+                    <div className="font-bold">
                       Terra adorada, Entre outras mil,
                       <br />
-                      És tu, Brasil, Ó Pátria amada! <br />
+                      És tu, Brasil, Ó Pátria amada!
+                      <br />
                       Dos filhos deste solo és mãe gentil,
                       <br />
                       Pátria amada, Brasil!
@@ -885,88 +876,87 @@ export default function Culture() {
                   </div>
                 </div>
               </div>
+            </div>
 
-              {/* Player de Música */}
-              <div className="rounded-xl bg-white/5 backdrop-blur-md border-1 border-white shadow-2xl overflow-hidden">
-                {/* Conteúdo do Player */}
-                <div className="px-4 py-3 md:px-8 md:py-6">
-                  <audio ref={audioRef} src={song} preload="metadata"></audio>
+            {/* Player de Música */}
+            <div className="rounded-xl bg-white/5 backdrop-blur-md border-1 border-white text-white mt-4 shadow-2xl overflow-hidden">
+              {/* Conteúdo do Player */}
+              <div className="px-4 py-3 md:px-8 md:py-6">
+                <audio ref={audioRef} src={song} preload="metadata"></audio>
 
-                  {/* Visualizador de Ondas Sonoras (Decorativo) */}
-                  <div className="flex items-center justify-center gap-1 h-12 md:h-16 mb-2">
-                    {[...Array(12)].map((_, i) => (
-                      <div
-                        key={i}
-                        className={`bg-green-700 rounded-full transition-all duration-300 ${
-                          isPlaying ? "animate-pulse" : ""
-                        }`}
-                        style={{
-                          width: "3px",
-                          height: `${Math.random() * 30 + 8}px`,
-                          animationDelay: `${i * 0.1}s`,
-                          opacity: isPlaying ? 0.8 : 0.3,
-                        }}
-                      ></div>
-                    ))}
-                  </div>
-
-                  {/* Informações de tempo */}
-                  <div className="space-y-2">
-                    <div className="flex justify-between text-xs md:text-sm font-medium mb-2">
-                      <span>0:00</span>
-                      <span>3:29</span>
-                    </div>
-
-                    {/* Barra de Progresso */}
+                {/* Visualizador de Ondas Sonoras (Decorativo) */}
+                <div className="flex items-center justify-center gap-1 h-12 md:h-16 mb-2">
+                  {[...Array(12)].map((_, i) => (
                     <div
-                      className="w-full h-2 md:h-3 bg-gray-200 rounded-full relative cursor-pointer group overflow-hidden"
-                      onClick={handleSeek}
+                      key={i}
+                      className={`bg-green-700 rounded-full transition-all duration-300 ${
+                        isPlaying ? "animate-pulse" : ""
+                      }`}
+                      style={{
+                        width: "3px",
+                        height: `${Math.random() * 30 + 8}px`,
+                        animationDelay: `${i * 0.1}s`,
+                        opacity: isPlaying ? 0.8 : 0.3,
+                      }}
+                    ></div>
+                  ))}
+                </div>
+
+                {/* Informações de tempo */}
+                <div className="space-y-2">
+                  <div className="flex justify-between text-xs md:text-sm font-medium mb-2">
+                    <span>0:00</span>
+                    <span>3:29</span>
+                  </div>
+
+                  {/* Barra de Progresso */}
+                  <div
+                    className="w-full h-2 md:h-3 bg-gray-200 rounded-full relative cursor-pointer group overflow-hidden"
+                    onClick={handleSeek}
+                  >
+                    {/* Barra de progresso com gradiente */}
+                    <div
+                      className="h-full bg-green-500 rounded-full relative transition-all duration-300 shadow-sm"
+                      style={{ width: `${progress}%` }}
                     >
-                      {/* Barra de progresso com gradiente */}
-                      <div
-                        className="h-full bg-green-500 rounded-full relative transition-all duration-300 shadow-sm"
-                        style={{ width: `${progress}%` }}
-                      >
-                        {/* Brilho no final da barra */}
-                        <div className="absolute right-0 top-0 w-1 h-full bg-white/40 rounded-full"></div>
-                      </div>
-
-                      {/* Indicador de posição */}
-                      <div
-                        className="absolute top-1/2 w-3 h-3 md:w-5 md:h-5 bg-white rounded-full border-2 border-green-500 shadow-lg transform -translate-y-1/2 transition-all duration-300 group-hover:scale-110"
-                        style={{
-                          left: `calc(${progress}% - 6px)`,
-                          boxShadow: "0 2px 8px rgba(34, 197, 94, 0.4)",
-                        }}
-                      ></div>
+                      {/* Brilho no final da barra */}
+                      <div className="absolute right-0 top-0 w-1 h-full bg-white/40 rounded-full"></div>
                     </div>
 
-                    {/* Botão Play/Pause Principal */}
-                    <div className="flex items-center justify-center gap-4 md:gap-8 my-3 md:my-4">
-                      <button
-                        onClick={togglePlay}
-                        className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-green-500 hover:bg-green-400 text-white shadow-xl transform hover:scale-110 transition-all duration-200 flex items-center justify-center ring-2 md:ring-4 ring-green-500/20"
-                      >
-                        {isPlaying ? (
-                          <Pause size={20} className="md:size-7" />
-                        ) : (
-                          <Play
-                            size={20}
-                            className="md:size-7"
-                            style={{ marginLeft: "2px" }}
-                          />
-                        )}
-                      </button>
-                    </div>
+                    {/* Indicador de posição */}
+                    <div
+                      className="absolute top-1/2 w-3 h-3 md:w-5 md:h-5 bg-white rounded-full border-2 border-green-500 shadow-lg transform -translate-y-1/2 transition-all duration-300 group-hover:scale-110"
+                      style={{
+                        left: `calc(${progress}% - 6px)`,
+                        boxShadow: "0 2px 8px rgba(34, 197, 94, 0.4)",
+                      }}
+                    ></div>
                   </div>
 
-                  {/* Mensagem motivacional */}
-                  <div className="rounded-xl bg-white/5 backdrop-blur-md border-1 border-white text-center mt-3 md:mt-4 p-2 md:p-3">
-                    <h2 className="text-sm md:text-md font-medium">
-                      🏆 Orgulhe-se de ser brasileiro! Nossa pátria amada,
-                      Brasil!
-                    </h2>
+                  {/* Botão Play/Pause Principal */}
+                  <div className="flex items-center justify-center gap-4 md:gap-8 my-3 md:my-4">
+                    <button
+                      onClick={togglePlay}
+                      className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-green-500 hover:bg-green-400 text-white shadow-xl transform hover:scale-110 transition-all duration-200 flex items-center justify-center ring-2 md:ring-4 ring-green-500/20"
+                    >
+                      {isPlaying ? (
+                        <Pause size={20} className="md:size-7" />
+                      ) : (
+                        <Play
+                          size={20}
+                          className="md:size-7"
+                          style={{ marginLeft: "2px" }}
+                        />
+                      )}
+                    </button>
                   </div>
+                </div>
+
+                {/* Mensagem motivacional */}
+                <div className="rounded-xl bg-white/5 backdrop-blur-md border-1 border-white text-center mt-3 md:mt-4 p-2 md:p-3">
+                  <h2 className="text-md font-medium">
+                    🏆 Orgulhe-se de ser brasileiro! Nossa pátria amada, Brasil!
+                  </h2>
                 </div>
               </div>
             </div>
