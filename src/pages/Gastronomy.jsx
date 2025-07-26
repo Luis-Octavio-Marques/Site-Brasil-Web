@@ -174,18 +174,15 @@ export default function Gastronomy() {
         "Refrigerante criado no Brasil em 1921, feito com extrato do fruto amazônico guaraná, tornou-se símbolo nacional.",
       descricao: "Refrigerante brasileiro feito com extrato de guaraná.",
       ingredientes: [
-        "Extrato de guaraná",
-        "Água gaseificada",
-        "Açúcar",
-        "Ácido cítrico",
-        "Aroma natural",
+        "1 colher de chá de guaraná em pó (vendido em lojas naturais)",
+        "300 ml de água gelada",
+        "1 colher de sopa de mel ou açúcar (opcional)",
+        "Suco de ½ limão (opcional, para dar frescor)",
       ],
       preparo: [
-        "Misture o extrato de guaraná com água",
-        "Adicione açúcar ao gosto",
-        "Acrescente ácido cítrico",
-        "Gasifique a mistura",
-        "Adicione aroma natural",
+        "Misture o guaraná em pó com a água",
+        "Adicione mel/açúcar e mexa bem até dissolver",
+        "Se quiser, adicione o suco de limão",
         "Sirva bem gelado",
       ],
       tempo: "15 minutos",
@@ -956,31 +953,33 @@ export default function Gastronomy() {
     },
     {
       id: 32,
-      nome: "Pão de Açúcar Mineiro",
+      nome: "Doce de Ovos cremoso",
       regiao: "Sudeste",
       origem:
-        "Doce tradicional mineiro que leva o nome do famoso ponto turístico carioca. Surgiu nas fazendas de Minas Gerais no século XVIII.",
+        "Doce tradicional mineiro feito com gemas e açúcar, com origem nas fazendas de Minas Gerais no século XVIII.",
       descricao:
-        "Doce cremoso feito com açúcar cristal, leite e ovos, típico da culinária mineira.",
+        "Doce tradicional feito com gemas, açúcar e leite, conhecido por sua textura cremosa e sabor delicado. Muito popular em Minas Gerais e Portugal.",
       ingredientes: [
-        "2 xícaras de açúcar cristal",
-        "1 xícara de leite",
-        "6 gemas de ovo",
-        "1 colher de sopa de manteiga",
-        "Canela em pó para polvilhar",
+        "6 gemas de ovo peneiradas",
+        "1 xícara de açúcar",
+        "½ xícara de água",
+        "1 colher de sopa de manteiga (opcional, para dar brilho e sabor)",
+        "Canela em pó para polvilhar (opcional)",
+        "1 pitada de sal (opcional, para equilibrar o doce)",
       ],
       preparo: [
-        "Faça uma calda com açúcar e leite",
-        "Bata as gemas e adicione à calda morna",
-        "Cozinhe mexendo até engrossar",
-        "Adicione a manteiga",
-        "Despeje em formas e polvilhe canela",
-        "Deixe esfriar antes de servir",
+        "Peneire as gemas (sem raspar a peneira) para retirar a película e evitar cheiro forte de ovo",
+        "Misture o açúcar com a água na panela e leve ao fogo médio, sem mexer, até formar uma calda rala",
+        "Retire do fogo e deixe a calda amornar um pouco",
+        "Adicione as gemas aos poucos na calda, mexendo sempre",
+        "Leve novamente ao fogo baixo, mexendo sempre, até formar um creme espesso e brilhante",
+        "Se desejar, adicione a manteiga no final e misture até derreter",
+        "Despeje em taças individuais ou travessa, polvilhe canela a gosto e sirva morno ou gelado",
       ],
       tempo: "45 minutos",
       pessoas: "8 pessoas",
       dificuldade: "Médio",
-      imagem: "🍮",
+      imagem: "🥚",
       cor: "bg-gradient-to-r from-gray-700 to-gray-900",
     },
     {
@@ -1375,7 +1374,7 @@ export default function Gastronomy() {
         @keyframes fadeIn {
           from {
             opacity: 0;
-            transform: translateY(20px);
+            transform: translateY(-20px);
           }
           to {
             opacity: 1;
